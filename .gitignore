@@ -297,3 +297,6 @@ TSWLatexianTemp*
 *.sta
 
 yarn.lock
+
+svg-inkscape/*
+
