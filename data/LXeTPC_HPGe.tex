@@ -27,7 +27,7 @@
 入射电子核$\gamma$光子与电子相互作用，相应地产生电子反冲（electronic recoil, ER）。
 
 反冲能会激发或电离液氙，激发态的$\mathrm{Xe_2^*}$退激，
-在灵敏体积中产生波长为175$\si{nm}$的闪烁光，称为$\mathrm{S1}$，闪烁光在液氙中传播，
+在灵敏体积中产生波长为178$\si{nm}$的闪烁光，称为$\mathrm{S1}$，闪烁光在液氙中传播，
 经过一系列光学过程后被PMT阵列收集并在数据采集（data acquisition, DAQ）系统中被记录下来。
 能量沉积也会产生电离信号，在漂移电场作用下，电子从阴极方向向门电极方向漂移，在门电极和阳极之间的电场中被拉出至液面，
 并在气态氙中产生闪烁光，称为$\mathrm{S2}$。另外也有一部分能量沉积以热能形式耗散。
@@ -57,6 +57,47 @@ $W$是能量沉积产生一个激发态氙或电子-氙离子所需平均能量�
 $L$对电场大小和反冲能量的依赖关系可以由NEST模型描述。
 
 激发-电离比$\langle N_{ex}/N_i\rangle$反冲粒子对氙原子核的激发和电离截面有关。
+对于电子反冲，这个值被认为是在0.06到0.20之间的常数。
+对于核反冲，激发-电离比是沉积能量和灵敏体积内电场$F$的函数\cite{lenardo_global_2015}。
+在$81\si{kV/cm}$电场下，$5-40\si{keV_{nr}}$的核反冲的激发-电离比在0.7到1.0之间。
+$N_i$和$N_{ex}$的涨落可以用二项分布描述：
+
+\begin{align}
+    \label{eq:N_iex}
+    N_i &\sim \mathrm{Binom}\left(N_q,\frac{1}{1+\langle N_{ex}/N_{i}\rangle}\right) \\
+    N_{ex} &= N_q - N_i
+\end{align}
+
+电离电子有一定的几率$1-r$从电子-离子对中逃逸，$r$被称为重组比例（recombination ratio）。
+
+\begin{align}
+    \label{eq:N_er}
+    N_e &\sim \mathrm{Binom}\left(N_i,1-r\right) \\
+    N_\gamma &= N_i - N_e + N_{ex}
+\end{align}
+
+式\ref{eq:N_er}中，$N_\gamma$为激子推激以及电子-离子对重组放出的光子个数，$N_{e}$为逃逸的电子个数。
+因为某些探测器效应，如电场不均匀性和某些内禀涨落\cite{lux_collaboration_tritium_2016}，我们用正态分布来描述$r$：
+
+\begin{align}
+    \label{eq:r}
+    r &\sim \mathrm{Gauss}\left(\langle r\rangle,\Delta r\right)
+\end{align}
+
+平均重组比例$\langle r\rangle$依赖于沉积能量大小和电场强弱，
+其可以用Thomas-Imel（TI）箱模型描述\cite{thomas_recombination_1987}：
+
+\begin{align}
+    \label{eq:mr}
+    \langle r\rangle &= 1 - \frac{\ln{\left(1+N_i\varsigma/4\right)}}{N_i\varsigma/4}
+\end{align}
+
+其中$\varsigma$是TI模型中的电场场强相关的参数。$\Delta r$描述了重组比例的涨落：
+
+\begin{align}
+    \label{eq:sr}
+    \Delta r &= q_2\left(1-e^{-\epsilon/q_3}\right)
+\end{align}
 
 \section{地面运行的LXeTPC探测器设计}
 
