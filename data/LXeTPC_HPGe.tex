@@ -11,11 +11,10 @@
 \begin{figure}
     \centering
     \includegraphics[width=0.7\linewidth]{figures/tpc_signals.png}
-    \caption{LXeTPC工作原理示意图。TPC的上下端安装有两组光电倍增管（photomultiplier tube, PMT）阵列。
+    \caption{\label{fig:tpc_principle} LXeTPC工作原理示意图。TPC的上下端安装有两组光电倍增管（photomultiplier tube, PMT）阵列。
     当入射粒子，如WIMP或中微子，撞击$\mathrm{Xe}$原子核，闪烁光信号将被PMT阵列探测到。一组TPC电极会建立几段纵向电场。
     能量沉积最终转化为电离电子的动能，在阴极（Cathode）和门电极（Gate）之间纵向电场的作用下，
     电子向上漂移并在门电极和阳极（Anode）之间产生正比闪烁光，该闪烁光也会被PMT阵列探测到。\cite{xenon_collaboration_xenon1t_2017}。}
-    \label{fig:tpc_principle}
 \end{figure}
 
 图\ref{fig:tpc_principle}简要呈现了LXeTPC的工作原理。圆柱形TPC分为上下气液两种相态，并安装5层电极。
@@ -201,11 +200,10 @@ $\sigma_p$是位置重建的分辨率，是$\mathrm{S2}$大小和$(x,y,z)$的函
 \begin{figure}
     \centering
     \includesvg[width=0.7\linewidth]{figures/nested.svg}
-    \caption{LXeTPC探测器结构和屏蔽体设计示意图。从外到内屏蔽体材料分别为：聚乙烯、铅、聚乙烯、铜。
+    \caption{\label{fig:relics_geo} LXeTPC探测器结构和屏蔽体设计示意图。从外到内屏蔽体材料分别为：聚乙烯、铅、聚乙烯、铜。
     屏蔽体内部是空气层、外不锈钢罐体、真空隔热层、内不锈钢罐体、反符合探测器、中心液氙探测器。
     直角矩形代表长方体几何，圆角矩形代表圆柱体几何。
     $\mu$子反符合探测器在屏蔽体外部，并未展示在图中；示意图未按比例绘制。}
-    \label{fig:relics_geo}
 \end{figure}
 
 为了屏蔽可能的中子本底，最外部的屏蔽层使用聚乙烯使反应堆堆芯传播来的快中子减速并被吸收；
@@ -213,7 +211,7 @@ $\sigma_p$是位置重建的分辨率，是$\mathrm{S2}$大小和$(x,y,z)$的函
 考虑到$\mu$子与铅层作用产生的$\mu$致中子（muon-induced neutron）可能成为实验的主要本底，在铅屏蔽层内部，使用聚乙烯层进一步屏蔽中子；
 内聚乙烯层内部的高纯无氧铜用于屏蔽其外屏蔽体产生的$\gamma$本底。
 
-但是$\mu$子的穿透能力很强，我们仍然需要使用$\mu$子反符合探测器（muon veto detector）将$mu$子本底压低2个量级。
-详细的$\mu$子模型和模拟以及相应的事件筛选条件，将在章节\ref{sec:backgrounds}中讨论。
+但是$\mu$子的穿透能力很强，我们仍然需要使用反符合探测器（muon veto detector）将$\mu$子本底压低2个量级。
+详细的$\mu$子模型和模拟以及相应的事件筛选条件，将在第\ref{sec:backgrounds}章中讨论。
 
 \section{HPGe探测器的工作原理}

@@ -2,7 +2,98 @@
 
 \chapter{CE$\nu$NS探测信号模型}
 
+本章将分析反应堆中微子的来源和能谱，以探测器响应为基础建立实验中的信号模型。
+
 \section{反应堆中微子的CE$\nu$NS}
+
+典型的热中子堆（thermal-neutron reactor）中99.7\%以上的反应堆中微子来自于四种主要裂变核素子核（裂变碎片）的衰变：
+${}^{235}\mathrm{U},{}^{238}\mathrm{U},{}^{239}\mathrm{Pu},{}^{241}\mathrm{Pu}$\cite{juno_collaboration_tao_2020}。
+反应堆中可裂变核素均为富中子核素，其裂变碎片也是富中子核素，可以发生$\beta$衰变放出电子（$\beta$射线）和电子反中微子。
+每一次核裂变后会伴随约6次$\beta$衰变和中微子发射，热中子堆每吉瓦（$10^{9}\si{W},\si{GW}$）热功率将每秒产生$2\times10^{20}$个电子反中微子。
+这些中微子的能谱是几千种裂变碎片的$\beta$衰变中微子能谱的叠加，见图\ref{fig:fission}。裂变产物的复杂性对于精确地计算反应堆中微子能谱是不利的。
+
+\begin{figure}
+  \begin{subfigure}{.3\textwidth}
+    \centering
+    \includesvg[width=1.0\linewidth]{figures/Nuclear_fission.svg}
+    \caption{\label{fig:nuclear_fission} 典型的${}^{235}\mathrm{U}$裂变过程}
+  \end{subfigure}
+  \begin{subfigure}{.7\textwidth}
+    \centering
+    \includesvg[width=1.0\linewidth]{figures/fission_yield.svg}
+    \caption{\label{fig:fission_yield} ${}^{235}\mathrm{U}$和${}^{239}\mathrm{Pu}$的热中子裂变产额}
+  \end{subfigure}
+  \caption{\label{fig:fission} 热中子堆中的裂变过程。典型裂变核素${}^{235}\mathrm{U}$的产物，如${}^{92}\mathrm{Kr}$和${}^{141}\mathrm{Ba}$均为$\beta$衰变核素，见图\subref{fig:nuclear_fission}；裂变碎片成分十分复杂，热中子裂变条件下，${}^{235}\mathrm{U}$和${}^{239}\mathrm{Pu}$裂变碎片的质量与产额关系中，碎片质量将以裂变核素质量的一半为轴，几乎左右对称，并形成两个峰\cite{crouch_fission-product_1977}，见图\subref{fig:fission_yield}。}
+\end{figure}
+
+目前有两种反应堆中微子能谱模型。2011年前，最常用的反应堆中微子能谱为ILL-Vogel模型，其中${}^{235}\mathrm{U}$、${}^{239}\mathrm{Pu}$和${}^{241}\mathrm{Pu}$的
+能谱反推自1980年代在ILL（the Institut Laue-Langevin）的裂变产物$\beta$能谱测量\cite{von_feilitzsch_experimental_1982,schreckenbach_determination_1985,hahn_antineutrino_1989}，
+因${}^{238}\mathrm{U}$裂变主要由快中子引发，难以直接测量，其中微子能谱来自P.Vogel的理论计算\cite{p_vogel_neutrino_1989}。
+ILL-Vogel模型与2011年前的反应堆中微子实验的结果吻合\cite{an_improved_2017}。
+2011年后P.Huber和T.A.Mueller等人引入了更精细的理论计算\cite{huber_determination_2011,mueller_improved_2011}，称为Huber-Mueller模型，
+得到的中微子能谱相对于测量结果有超出。
+
+在灵敏度预测中高能（超过2$\si{MeV}$）中微子的能谱$s_i(E_\nu)$输入（$i=1\cdots4$，遍历四种裂变核素），将使用Huber-Mueller模型，其中${}^{235}\mathrm{U}$、${}^{239}\mathrm{Pu}$和${}^{241}\mathrm{Pu}$参考P.Huber的计算结果\cite{huber_determination_2011}，${}^{238}\mathrm{U}$参考T.A.Mueller的计算结果\cite{mueller_improved_2011}；
+在低能（$0-2\si{MeV}$）区域，将使用P.Vogel的理论计算能谱\cite{p_vogel_neutrino_1989}，见图\ref{fig:neutrino_energy_spectrum}。本文中将反应堆将只以裂变产物$\beta$衰变放出的电子反中微子作为中微子源。
+
+\begin{figure}
+    \centering
+    \includesvg[width=0.7\linewidth]{figures/neutrino_energy_spectrum.svg}
+    \caption{\label{fig:neutrino_energy_spectrum} 灵敏度预测中使用的各种核素的中微子能谱，
+    因逆$\beta$衰变反应有约$1.8\si{MeV}$的阈值，所以虽然低能中微子占总流强的主要部分，但未被Daya Bay等反应堆中微子实验测量到\cite{an_improved_2017}。}
+\end{figure}
+
+为了计算反应堆中微子的总能谱和总流强，需要引入裂变核素每次裂变的平均释放能量$e_i$，已有较精确的理论计算\cite{ma_improved_2013}，见表\ref{tab:per_fission}：
+
+\begin{table}
+  \centering
+  \caption{四种主要裂变核素每次裂变释放的平均能量和裂变份额}
+  \begin{tabular}{c|c|c}
+    \toprule
+    核素 & $e_i(\si{MeV})$ & $f_i$ \\
+    \midrule
+    ${}^{235}\mathrm{U}$ & 202.36 & 0.561 \\
+    ${}^{238}\mathrm{U}$ & 205.99 & 0.076 \\
+    ${}^{239}\mathrm{Pu}$ & 211.12 & 0.307 \\
+    ${}^{241}\mathrm{Pu}$ & 214.26 & 0.056 \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:per_fission}
+\end{table}
+
+有了以上基础，反应堆中微子的能谱定义为：
+
+\begin{align}
+    \label{eq:sum_spectrum}
+    \phi\left(E_\nu,t\right) &= \frac{W(t)}{\sum_i f_i(t)e_i}\sum_i f_i(t)s_i(E_\nu)
+\end{align}
+
+其中$t$为反应堆运行时间，$W(t)$为反应堆运行功率，其与堆芯实际运行状态有关\cite{juno_collaboration_tao_2020}；
+$f_i(t)$为裂变份额（fission fraction），指四种核素的裂变次数在总裂变次数中的占比，见表\ref{tab:per_fission}。
+典型的商用热中子堆中，${}^{235}\mathrm{U}$和${}^{239}\mathrm{Pu}$的裂变份额占主要部分。
+
+裂变份额与核燃料的燃耗（burn-up），即消耗掉的燃料数量，以及燃耗深度（burn-up depth）有关。对于以富集铀作为核燃料的热中子堆，随着${}^{235}\mathrm{U}$的裂变消耗，
+可转换材料如${}^{238}\mathrm{U}$会俘获中子转换为易裂变同位素${}^{239}\mathrm{Pu}$，
+使得堆内$\mathrm{U}$元素逐渐消耗，$\mathrm{Pu}$元素逐渐累积，见图\ref{fig:fission_fraction}。
+
+\begin{figure}
+    \centering
+    \includesvg[width=0.7\linewidth]{figures/fission_fraction.svg}
+    \caption{\label{fig:fission_fraction} 大亚湾核电站反应堆一个典型的核燃料循环中，裂变份额随着燃耗深度的变化\cite{an_evolution_2017}。}
+\end{figure}
+
+在本文中，简化考虑反应堆能谱形状和绝对强度的时间演化，即认为$f_i(t)=f_i,W(t)=W$。
+
+LXeTPC实验将选址在山东石岛湾核电站（Shidao Bay Nuclear Power Plant）的某机组附近，预计届时将以$W=0.25\si{GW}$堆芯作为中微子源，在堆芯距离约$12\si{m}$位置放置探测器。实验选址如图\ref{fig:shidaowan}。
+
+\begin{figure}
+    \centering
+    % \includepdf[width=0.7\linewidth]{figures/shidaowan.pdf}
+    \includegraphics[width=1.0\linewidth]{figures/shidaowan.pdf}
+    \caption{\label{fig:shidaowan} 计划中的LXeTPC实验的选址位置。图片来源：Google Maps.\cite{shidaowan_googlemap_220524}。}
+\end{figure}
+
+
 
 \section{LXeTPC探测CE$\nu$NS信号}
 \label{sec:lxe_signal}
