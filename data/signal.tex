@@ -83,7 +83,6 @@ $f_i(t)$为裂变份额（fission fraction），指四种核素的裂变次数�
 \end{figure}
 
 在本文中，简化考虑反应堆能谱形状和绝对强度的时间演化，即认为$f_i(t)=f_i,W(t)=W$。
-
 LXeTPC实验将选址在山东石岛湾核电站（Shidao Bay Nuclear Power Plant）的某机组附近，预计届时将以$W=0.25\si{GW}$堆芯作为中微子源，在堆芯距离约$12\si{m}$位置放置探测器。实验选址如图\ref{fig:shidaowan}。
 
 \begin{figure}
@@ -93,9 +92,48 @@ LXeTPC实验将选址在山东石岛湾核电站（Shidao Bay Nuclear Power Plan
     \caption{\label{fig:shidaowan} 计划中的LXeTPC实验的选址位置。图片来源：Google Maps.\cite{shidaowan_googlemap_220524}。}
 \end{figure}
 
+至此我们可以计算得到总的反应堆中微子能谱$\phi\left(E_\nu\right)$，如图\ref{fig:neutrino_flux_spectrum}：
 
+\begin{figure}
+    \centering
+    \includesvg[width=0.7\linewidth]{figures/neutrino_flux_spectrum.svg}
+    \caption{\label{fig:neutrino_flux_spectrum} 石岛湾核电站反应堆中微子能谱，只考虑单堆芯。
+    在堆芯距离12$\si{m}$处，反应堆中微子总通量可以达到$2.5\times 10^{12}\si{cm^{-2}s^{-1}}$，
+    作为对比，JUNO-TAO实验选址的台山核电站（热功率$4.6\si{GW}$）堆芯附近$30\si{m}$处中微子总通量可以达到$7.4\times 10^{12}\si{cm^{-2}s^{-1}}$\cite{juno_collaboration_tao_2020}。}
+\end{figure}
+
+反应堆中微子通过探测器时，探测介质与中微子发生CE$\nu$NS反应的事例率与中微子能量的关系为$S'(E_\nu)$：
+
+\begin{align}
+    \label{eq:sevent_rate}
+    S'(E_\nu) &= \frac{\phi(E_\nu)}{4\pi L^2}\sum_j N_j\cdot \sigma_j(E_\nu)
+\end{align}
+
+其中$N_j$为每单位质量探测介质中原子核数目，单位为$\si{kg^{-1}}$，$j$遍历介质中的不同同位素，对于氙，有${}^{129}\mathrm{Xe},{}^{131}\mathrm{Xe},{}^{132}\mathrm{Xe}$等几种，
+对于锗${}^{70}\mathrm{Ge},{}^{72}\mathrm{Ge},{}^{74}\mathrm{Ge}$等几种，同位素丰度可以简单地从公开数据集中获取；
+$E_\nu$为中微子能量，$\phi(E_\nu)$为中微子能谱。计算中不考虑反应堆中微子随燃耗深度的演化。
+
+但是在探测中，我们不仅考察总事例率，也会考察可观测物理量，如核反冲能$T_{\mathrm{nr}}$、光子和电子数目（$\mathrm{S1}$和$\mathrm{S2}$）的分布，
+其中事例率$S(T_{\mathrm{nr}})$与$T_{\mathrm{nr}}$的关系为：
+\begin{align}
+    \label{eq:tnr_event_rate}
+    S(T_{\mathrm{nr}}) &= \frac{1}{4\pi L^2}\int\phi(E_\nu)\sum_j N_j\cdot \frac{\mathrm{d}\sigma_j(E_\nu)}{\mathrm{d}T}\mathrm{d}E_\nu
+\end{align}
+
+\begin{figure}
+    \centering
+    \includesvg[width=1.0\linewidth]{figures/cevns_event_rate.svg}
+    \caption{\label{fig:cevns_event_rate} 氙与锗两种介质探测CE$\nu$NS的核反冲能分布（事例率）。
+    因为氙原子核普遍比锗原子核重，所以以氙为介质的核反冲能谱向低能偏移。
+    不考虑探测效率，氙探测器中$0.5\si{keV_{\mathrm{nr}}}$以上的核反冲可以达到$228.1\si{kg^{-1}y^{-1}}$，
+    锗探测器中$1.0\si{keV_{\mathrm{nr}}}$以上的核反冲可以达到$69.3\si{kg^{-1}y^{-1}}$。}
+\end{figure}
 
 \section{LXeTPC探测CE$\nu$NS信号}
 \label{sec:lxe_signal}
+
+\subsection{S2-Only测量}
+
+\subsection{S1-S2测量}
 
 \section{HPGe探测器的CE$\nu$NS信号}

@@ -41,11 +41,11 @@
 液氙中有三种基本能量响应：热能耗散、氙原子激发和氙原子电离。LXeTPC一般不能探测热能。
 液氙中的能量响应可以用NEST（the Noble Element Simulation Technique）模型描述\cite{szydagis_nest_2011,lenardo_global_2015}。
 激发态的氙数目$N_{\mathrm{ex}}$和被电离的电子-氙离子对个数$N_i$之和为可探测的量子（quanta）数$N_q$，
-$N_q$可以用于重建反冲能$\epsilon$。在热能损失下，$N_q$服从二项分布：
+$N_q$可以用于重建反冲能$\varepsilon $。在热能损失下，$N_q$服从二项分布：
 
 \begin{align}
     \label{eq:N_q}
-    N_q &\sim \mathrm{Binom}\left(\epsilon/W,L\right)
+    N_q &\sim \mathrm{Binom}\left(\varepsilon /W,L\right)
 \end{align}
 
 其中$L$为Lindhard因子，用于描述热能损失的比例；
@@ -95,16 +95,16 @@ $N_i$和$N_{\mathrm{ex}}$的涨落可以用二项分布描述：
 
 \begin{align}
     \label{eq:sr}
-    \Delta r &= q_2\left(1-e^{-\epsilon/q_3}\right)
+    \Delta r &= q_2\left(1-e^{-\varepsilon /q_3}\right)
 \end{align}
 
-平均的光子产额$L_y=\langle N_\gamma\rangle/\epsilon$和电子产额$Q_y=\langle N_e\rangle/\epsilon$定义为：
+平均的光子产额$L_y=\langle N_\gamma\rangle/\varepsilon $和电子产额$Q_y=\langle N_e\rangle/\varepsilon $定义为：
 
 \begin{align}
     \label{eq:N_g}
-    L_y &= \langle N_\gamma\rangle/\epsilon = \frac{1}{W}\frac{\langle r\rangle+\langle N_{\mathrm{ex}}/N_i\rangle}{1+\langle N_{\mathrm{ex}}/N_i\rangle} \\
+    L_y &= \langle N_\gamma\rangle/\varepsilon  = \frac{1}{W}\frac{\langle r\rangle+\langle N_{\mathrm{ex}}/N_i\rangle}{1+\langle N_{\mathrm{ex}}/N_i\rangle} \\
     \label{eq:N_e}
-    Q_y &= \langle N_e\rangle/\epsilon = \frac{1}{W}\frac{1-\langle r\rangle}{1+\langle N_{\mathrm{ex}}/N_i\rangle}
+    Q_y &= \langle N_e\rangle/\varepsilon  = \frac{1}{W}\frac{1-\langle r\rangle}{1+\langle N_{\mathrm{ex}}/N_i\rangle}
 \end{align}
 
 本文中将不细致讨论光子和电子产生的微观过程，而将光子产额$L_y$和电子产额$Q_y$作为带不确定度的参数。
