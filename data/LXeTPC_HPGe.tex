@@ -37,6 +37,7 @@
 事件在TPC圆柱的上下表面投影位置可以通过顶部PMT阵列接收到的$\mathrm{S2}$图案通过位置重建算法得到。
 
 \section{LXeTPC的响应模型}
+\label{sec:basic_response}
 
 液氙中有三种基本能量响应：热能耗散、氙原子激发和氙原子电离。LXeTPC一般不能探测热能。
 液氙中的能量响应可以用NEST（the Noble Element Simulation Technique）模型描述\cite{szydagis_nest_2011,lenardo_global_2015}。
@@ -98,7 +99,7 @@ $N_i$和$N_{\mathrm{ex}}$的涨落可以用二项分布描述：
     \Delta r &= q_2\left(1-e^{-\varepsilon /q_3}\right)
 \end{align}
 
-平均的光子产额$L_y=\langle N_\gamma\rangle/\varepsilon $和电子产额$Q_y=\langle N_e\rangle/\varepsilon $定义为：
+平均的光子产额（light yield）$L_y=\langle N_\gamma\rangle/\varepsilon $和电子产额（ionization yield）$Q_y=\langle N_e\rangle/\varepsilon $定义为：
 
 \begin{align}
     \label{eq:N_g}
@@ -150,7 +151,7 @@ $\mathrm{S2}$除了是$(x,y)$的函数外，也是$z$的函数。漂移电子在
 
 \begin{align}
     \label{eq:N_prop}
-    N_{\mathrm{prop}} &\sim \mathrm{Binom}\left(N_{\mathrm{ext}}G,\sqrt{N_{\mathrm{ext}}\Delta G}\right)
+    N_{\mathrm{prop}} &\sim \mathrm{Binom}\left(N_{\mathrm{ext}}G,\sqrt{N_{\mathrm{ext}}}\Delta G\right)
 \end{align}
 
 其中$\Delta G$是气体增益$G$的展宽。
@@ -185,7 +186,9 @@ $\sigma_p$是位置重建的分辨率，是$\mathrm{S2}$大小和$(x,y,z)$的函
 \end{align}
 
 其中$\tau'_e$是测量得到的电子的漂移寿命，$\vec{x_r}=(x_r,y_r,z_r)$为重建得到的事件位置。
-本文中将建立简单的信号响应模型，不考虑$\epsilon_L$和$G$的位置依赖性以及对$\mathrm{S1}$和$\mathrm{S2}$的修正引入的偏差。相关信号模型将在\ref{sec:lxe_signal}详细介绍。
+本文中将建立简化的响应模型，不考虑$\epsilon_L$和$G$的位置依赖性以及对$\mathrm{S1}$和$\mathrm{S2}$的修正引入的偏差，
+也不考虑漂移过程中的电子损耗（即认为$\tau_e=\infty$）。
+相关信号模型将在\ref{sec:lxe_signal}详细介绍。
 
 \section{地面运行的LXeTPC探测器设计}
 
