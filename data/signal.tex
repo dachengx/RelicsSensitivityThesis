@@ -123,7 +123,7 @@ $E_\nu$为中微子能量，$\phi(E_\nu)$为中微子能谱。计算中不考虑
 \begin{figure}
     \centering
     \includesvg[width=1.0\linewidth]{figures/cevns_event_rate.svg}
-    \caption{\label{fig:cevns_event_rate} 氙与锗两种介质探测CE$\nu$NS的核反冲能分布（事例率）。
+    \caption{\label{fig:cevns_event_rate} 氙（左图）与锗（右图）两种介质探测CE$\nu$NS的核反冲能分布（事例率）。
     因为氙原子核普遍比锗原子核重，所以以氙为介质的核反冲能谱向低能偏移。
     不考虑探测效率，氙探测器中$0.5\si{keV_{\mathrm{nr}}}$以上的核反冲可以达到$228.1\si{kg^{-1}y^{-1}}$，
     锗探测器中$1.0\si{keV_{\mathrm{nr}}}$以上的核反冲可以达到$69.3\si{kg^{-1}y^{-1}}$。}
@@ -170,6 +170,59 @@ $E_\nu$为中微子能量，$\phi(E_\nu)$为中微子能谱。计算中不考虑
     本文信号模型中采用2020年XENON1T的结果，NEST模型提供的核反冲产额与其有一定差异。}
 \end{figure}
 
+\subsection{S2-Only分析}
+
+S2-Only 分析为仅使用$\mathrm{S2}$作为似然函数（likelihood function）分析维度的物理分析。
+一般在$\mathrm{S1}$信息较少或不存在的情况下使用。对于反应堆中微子，其产生的核反冲能量较低，
+CE$\nu$NS事件大多不具有$\mathrm{S1}$或者$\mathrm{S1}$探测效率很低，所以主要采用S2-Only 分析。
+
+电子漂移到气液交界面处后，被提出液面的过程中可能有少量损耗，
+用概率为$\epsilon_\mathrm{ext}$的二项分布描述，见\ref{eq:N_ext}，本文中取$\epsilon_\mathrm{ext}=1$。
+强电场对提出电子的倍增过程用参数为$(g_2,\Delta g_2)$的正态分布描述：
+
+\begin{align}
+    \label{eq:s2}
+    \mathrm{S2} &\sim \mathrm{Gauss}\left(g_2,\sqrt{N_\mathrm{ext}}\cdot\Delta g_2\right)
+\end{align}
+
+其中取$g_2=20,\Delta g_2=6.67$。由此我们可以计算得到CE$\nu$NS事件的电子谱和$\mathrm{S2}$分布，
+比较信号本底在分析维度上的分布，对确定感兴趣的分析区域（region of interest, ROI）很重要，如图\ref{fig:S2eS2_rate}：
+
+\begin{figure}
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includesvg[width=1.0\linewidth]{figures/S2e_rate.svg}
+    \caption{\label{fig:S2e_rate} CE$\nu$NS事件中的电子个数$N_e$谱}
+  \end{subfigure}
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includesvg[width=1.0\linewidth]{figures/S2_rate.svg}
+    \caption{\label{fig:S2_rate} CE$\nu$NS事件中的$\mathrm{S2}$分布}
+  \end{subfigure}
+  \caption{\label{fig:S2eS2_rate} CE$\nu$NS事件中的电子个数$N_e$和$\mathrm{S2}$分布。
+  随着$N_e$或$\mathrm{S2}$上升，分布的权重迅速降低，说明对低能事件的探测对实验至关重要。
+  两图中浅蓝色阴影是感兴趣的分析区域，其上阈将在第\ref{sec:backgrounds}章中讨论。}
+\end{figure}
+
+降低探测器的能量下阈对十分重要。本文灵敏度计算中认为探测器对4个及以上的电子的探测效率为100\%；
+对更小的$\mathrm{S2}$，一方面探测效率低，另一方面，更低能区可能存在无法成功建模的本底，所以不予考虑；
+对应的$\mathrm{S2}$下阈取$80\mathrm{PE}$。
+
+低能反应堆中微子在探测器沉积的能量有更小的几率产生超过$\mathrm{S2}$下阈信号，
+所以通过CE$\nu$NS反应道测量的反应堆中微子大多具有较高能量，见图\ref{fig:neutrino_efficiency}。
+
+\begin{figure}
+    \centering
+    \includesvg[width=0.7\linewidth]{figures/neutrino_efficiency.svg}
+    \caption{\label{fig:neutrino_efficiency} $\mathrm{S2}$下阈取$80\mathrm{PE}$时探测到的CE$\nu$NS信号对应的中微子能量分布。
+    可见没有$4\si{MEV}$以下的中微子被探测到，CE$\nu$NS测量将有可能对反应堆中微子高能区域能谱的理论计算敏感。}
+\end{figure}
+
+\subsection{S1-S2分析}
+
+尽管CE$\nu$NS信号的$\mathrm{S1}$保留信息较少，但仍然可以通过单独分析包含$\mathrm{S1}$的信号，
+来限制某些与光信号有关的物理过程，如低能核反冲的光产额。
+
 光子在液氙中的光传输过程和损耗由乘积$\epsilon_\mathrm{hit}=\epsilon_L\cdot\epsilon_\mathrm{QE}\cdot\epsilon_\mathrm{CE}$描述：
 
 \begin{align}
@@ -186,21 +239,40 @@ $E_\nu$为中微子能量，$\phi(E_\nu)$为中微子能谱。计算中不考虑
 \end{align}
 
 双光电子概率$p_\mathrm{dpe}$取为0.2，PMT电荷分布的展宽用正态分布或伽马分布（Gamma distribution）描述，其标准差$\sigma_q$取为0.5。
-但实际上反应堆中微子能产生的$T_\mathrm{nr}$很低，产生的光信号很少，$\mathrm{S1}$携带信息较少，后续所有分析仅在$N_\mathrm{hit}$层面进行。
+但实际上反应堆中微子能产生的$T_\mathrm{nr}$很低，产生的光信号很少，$\mathrm{S1}$携带信息较少，后续所有分析仅在$N_\mathrm{hit}$维度进行。
 
-电子漂移到气液交界面处后，被提出液面的过程中可能有少量损耗，
-用概率为$\epsilon_\mathrm{ext}$的二项分布描述，见\ref{eq:N_ext}，本文中取$\epsilon_\mathrm{ext}=1$。
-强电场对提出电子的倍增过程用参数为$(g_2,\Delta g_2)$的正态分布描述：
+对于较小的$\mathrm{S1}$，触发和波形分类效率较低，我们使用接收率曲线来描述探测效率，如图\ref{fig:s1_hits_pe}。
 
-\begin{align}
-    \label{eq:s2}
-    \mathrm{S2} &\sim \mathrm{Gauss}\left(g_2,\sqrt{N_\mathrm{ext}}\cdot\Delta g_2\right)
-\end{align}
+\begin{figure}
+    \centering
+    \includesvg[width=1.0\linewidth]{figures/s1_hits_pe.svg}
+    \caption{\label{fig:s1_hits_pe} CE$\nu$NS信号$N_\mathrm{hit}$和$\mathrm{S1}$的接收率（左图），
+    CE$\nu$NS信号$N_\mathrm{hit}$分布（右图，同时要求$\mathrm{S2}>80\si{PE}$）。接收率曲线在$N_\mathrm{hit}\le1$时取0。
+    $N_\mathrm{hit}$主要集中在$N_\mathrm{hit}=2$的bar中。}
+\end{figure}
 
-其中取$g_2=20,\Delta g_2=6.67$。
+因$N_\mathrm{hit}$分布较窄，后续S1-S2分析中仍将以$\mathrm{S2}$为分析维度，只要求S1-S2事件的$N_\mathrm{hit}\ge2$。
+具体分析流程将在第\ref{sec:sensitivity}章中详细讨论。
 
-\subsection{S2-Only测量}
+表\ref{tab:lxe_tpc_parameters}为LXeTPC探测CE$\nu$NS信号过程中设置的探测器参数取值：
 
-\subsection{S1-S2测量}
+\begin{table}
+  \centering
+  \caption{}
+  \begin{tabular}{c|c|c}
+    \toprule
+    符号 & 物理量 & 取值 \\
+    \midrule
+    $L_y$ & 光子产额 & 图\ref{fig:lxe_nr_yield} \\
+    $Q_y$ & 电子产额 & 图\ref{fig:lxe_nr_yield} \\
+    $\epsilon_\mathrm{hit}$ & PMT击中效率 & 0.08 \\
+    $p_\mathrm{dpe}$ & PMT双光电子概率 & 0.2 \\
+    $\epsilon_\mathrm{ext}$ & 电子提取效率 & 1.0 \\
+    $g_2$ & $\mathrm{S2}$电子等效的平均光电子数 & $20\si{PE/\mathrm{e}^-}$ \\
+    $\Delta g_2$ & $\mathrm{S2}$电子等效的光电子数的标准差 & $6.67\si{PE/\mathrm{e}^-}$ \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:lxe_tpc_parameters}
+\end{table}
 
 \section{HPGe探测器的CE$\nu$NS信号}
