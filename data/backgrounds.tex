@@ -32,7 +32,7 @@ BambooMC具有较强的可拓展性，本文中使用基于BambooMC开发的软�
 \begin{table}
   \centering
   \caption{LXeTPC几何参数}
-  \begin{tabular}{c|c|c|c}
+  \begin{tabular}{cccc}
     \toprule
     名称 & 几何体 & 参数 & 材料 \\
     \midrule
@@ -72,6 +72,14 @@ BambooMC具有较强的可拓展性，本文中使用基于BambooMC开发的软�
 \end{figure}
 
 PMT石英窗上富集的${}^{40}\mathrm{K}$和${}^{137}\mathrm{Cs}$可能成为主要的本底来源，具体内容将在第\ref{sec:pmt_background}章中讨论。
+
+\section{本底事件的筛选与压低}
+
+本底事件经常与信号有不同的性质以及测量结果。
+对于$\mu$子本底，其可能强烈地在液氙反符合层中沉积能量，可以用反符合层对$\mu$子的标记将其本底压低。
+同时$\mu$子将可能在主探测器中多次沉积能量
+材料的$\beta$和$\gamma$放射性在中心探测器边缘单位体积沉积的能量比探测器中心多，所以一定程度地舍弃某些本底过高的区域，
+对物理信号的搜索是有利的。
 
 \section{$\mu$子本底}
 
@@ -124,7 +132,7 @@ Shukla公式在低能区域和高能区域都与数据符合得较好。
 \begin{table}
   \centering
   \caption{描述$\mu$子分布的Shukla公式采用的参数列表}
-  \begin{tabular}{c|c}
+  \begin{tabular}{cc}
     \toprule
     符号 & 取值 \\
     \midrule
@@ -150,10 +158,12 @@ Shukla公式在低能区域和高能区域都与数据符合得较好。
 到达地面附近的$\mu$子包含了$\mu^-$和$\mu^+$。
 CMS于2010年测量得到了地表附近的$\mu$子电荷比（charge ratio, $I_{\mu^+}/I_{\mu^-}$）约为$1.2766\pm0.0045$\cite{the_cms_collaboration_measurement_2010}。
 $\mu$子电荷比在$\mu$子动量小于$100\si{GeV/c}$时与能量几乎无关，且在更高动量的区域略增大。
-考虑到第\ref{sec:muon_nr}中$\mu$引起的核反冲本底主要由较低能量的$\mu^-$贡献，更高的电荷比意味着更低的核反冲本底，本文保守地使用不随能量变化的电荷比。
+考虑到第\ref{sec:muon_nr}节中讨论的$\mu$子核反冲本底主要由较低能量的$\mu^-$贡献，更高的电荷比意味着更低的核反冲本底，本文保守地使用不随能量变化的电荷比。
 
 \subsection{核反冲本底}
 \label{sec:muon_nr}
+
+$\mu$子通过两种方式
 
 \subsection{电子反冲本底}
 
@@ -165,5 +175,3 @@ $\mu$子电荷比在$\mu$子动量小于$100\si{GeV/c}$时与能量几乎无关�
 \subsection{屏蔽体材料本底}
 
 \subsection{液氙中惰性元素本底}
-
-\section{本底事件的筛选与压低}
