@@ -3,6 +3,42 @@
 \chapter{地面运行的LXeTPC本底研究}
 \label{sec:backgrounds}
 
+地面附近运行的LXeTPC将会经受原生宇宙线和次生宇宙线的轰击。
+来自外部空间的宇宙线成分以高能质子为主，在穿越地球大气层的过程中与大气分子发生簇射反应，产生大量次级粒子，
+主要包括质子、$\mu$子、电子、中子、$\gamma$光子等。宇宙线粒子通量与大气层深度有关，如图\ref{fig:vertical_flux}。
+
+\begin{figure}
+    \centering
+    \includesvg[width=0.7\linewidth]{figures/vertical_flux.svg}
+    \caption{\label{fig:vertical_flux} 宇宙线中不同粒子通量与大气深度的关系\cite{olive_review_2016}。
+    $\mu$子和中微子是地面附近通量最高的两种粒子，中微子较少与物质发生相互作用，$\mu$子成为实验中的主要本底。}
+\end{figure}
+
+$\mu$子是带电粒子，穿透能力较强。$\mu$子穿越物质的过程中通过电磁相互作用减速，产生电离，
+高能（$10\si{GeV}$以上）$\mu$子在物质中的能损$-\mathrm{d}E/\mathrm{d}x$大约为$2\si{MeV\cdot cm^{-1}}$。
+考虑相对论时间膨胀效应，$\mu$子在物质中能够穿越较长距离。$\mu$子还有可能被原子核俘获，
+使靶原子核序数减1，同时放出1个或多个中子。这些中子将是探测器中核反冲本底的主要来源。
+
+利用$\mu$子持续产生电离的特点，可以在探测器外围部署$\mu$子反符合探测器，
+当$\mu$子同时在反符合探测器和主探测器产生信号且符合一定条件时时，通过硬件触发或软件筛选，
+可以将主探测器中事件标记为$\mu$子事件以区分信号的本底。但物理信号如CE$\nu$NS也有一定几率发生在$\mu$子穿越探测器时，
+这时对$\mu$子事件的标记会使物理信号的探测效率降低，等效为曝光量（exposure）的损失，这种效应必须考虑到统计推断中，
+否则将高估探测器中产生的信号。
+
+地面附近的$\mu$子分布可以用Gaisser公式或Shukla公式描述。T.K.Gaisser在忽略地球曲率的情况下，
+给出了$\mu$子通量随$\mu$子能量$E_\mu$和天顶角（zenith angle）$\theta$的分布。天顶角为入射粒子与地面法线间的夹角\cite{gaisser_cosmic_2016}。
+
+\begin{align}
+    \label{eq:gaisser}
+    \frac{\mathrm{d}N_\mu}{\mathrm{d}E_\mu\mathrm{d}\Omega} &\approx 
+    1400E_\mu^{-2.7}/\left(\si{m^2\cdot s\cdot GeV\cdot sr}\right)\left(\frac{1}{1+\frac{1.1E_\mu\cos\theta}{\epsilon_\pi}}+\frac{0.054}{1+\frac{1.1E_\mu\cos\theta}{\epsilon_\kappa}}\right)
+\end{align}
+
+其中$\epsilon_\pi\approx115\si{GeV},\epsilon_\kappa\approx850\si{GeV}$。
+Gaisser公式只在高能区间（$E_\mu>100/\cos\theta\si{GeV}$）适用。
+
+到达地面附近的$\mu$子包含了$\mu^-$和$\mu^+$。
+
 \section{$\mu$子本底}
 
 \subsection{核反冲本底}
