@@ -199,6 +199,20 @@ CMS于2010年测量得到了地表附近的$\mu$子电荷比（charge ratio, $I_
 $\mu$子电荷比在$\mu$子动量小于$100\si{GeV/c}$时与能量几乎无关，且在更高动量的区域略增大。
 考虑到第\ref{sec:muon_nr}节中讨论的$\mu$子核反冲本底主要由较低能量的$\mu^-$贡献，更高的电荷比意味着更低的核反冲本底，本文保守地使用不随能量变化的电荷比。
 
+模拟中将从屏蔽体外部一个足够的水平平面上均匀取点作为$\mu$子的入射位置，通过Shukla公式对$\mu$子的入射角和能量进行采样，
+模拟几何如图\ref{fig:muon_inject}。
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\linewidth]{figures/muon_inject.pdf}
+  \caption{\label{fig:muon_inject} $\mu$子入射屏蔽体和探测器的示意图。
+  最顶部平面为$\mu$子初始位置，蓝色圆柱体为液氙探测器。}
+\end{figure}
+
+Geant4模拟中设置中心祝探测器和液氙反符合屏蔽层为灵敏探测器，并记录两种灵敏探测器中的能量沉积。
+因液氙中相近时间且相近空间位置的能量沉积并不能被有效区分，
+得到模拟结果后将使用聚类算法DBSCAN（Density-Based Spatial Clustering of Applications with Noise）\cite{ester_density-based_1996,schubert_dbscan_2017}合并临近时空中的能量沉积。
+
 \subsection{核反冲本底}
 \label{sec:muon_nr}
 
