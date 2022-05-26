@@ -21,16 +21,81 @@
 \end{align}
 
 标准模型中这两个参数为0，公式退化为\ref{eq:cevns_even_even}。
-下面分别分析LXeTPC上S2-Only分析和S1-S2分析。以及HPGe探测器上分析的实验灵敏度。
+下面分别分析LXeTPC上S2-Only分析和S1-S2分析。以及HPGe探测器上分析的实验灵敏度。假设曝光量为$30\si{kg\cdot y}$。
 
 \subsection{S2-Only分析}
 
 S2-Only分析仅使用$\mathrm{S2}$作为分析维度。$\epsilon_{ee}^{uV}=\epsilon_{ee}^{dV}=0$时，
 信号$\mathrm{S2}$分布如图\ref{fig:S2_rate}。
 
+假设4个及以上的漂移电子探测效率为100\%，，选取$\mathrm{S2}$范围为$[80, 200]\si{PE}$，分为3个bin。
+在该$\mathrm{S2}$范围中相应曝光量下CE$\nu$NS的总期望个数为4490.6个，核反冲本底的总期望个数为897.3，
+电子反冲本底的总期望个数为34.1。
 
+测量的主要系统误差来源分为三部分：反应堆中微子总流强不确定度$\sigma_{\gamma_f}$、本底不确定度$\beta_i$、液氙核反冲量子产额不确定度$t_i$。
+高能反应堆中微子能谱的理论计算、反应堆功率监测结果、裂变份额计算均会引入一定的不确定度\cite{an_improved_2017}，
+我们保守地设置$\sigma_{\gamma_f}=10\%$，且与中微子能量无关。
+
+核素活度测量结果不确定度，以及模拟中不同几何和辐射过程模型的使用，均会导致核反冲本底和电子反冲本底的不确定度，
+我们简单地设置核反冲本底不确定度$\sigma_{\beta_1}=10\%$，电子反冲本底不确定度$\sigma_{\beta_2}=10\%$，且与本底谱形状无关。
+
+液氙核反冲量子产额相对不确定度$t_1$和$t_2$分别对应核反冲中光和电子产额，
+本文采用2020年XENON1T的测量结果\cite{aprile_search_2021}，并向低能延拓，如图\ref{fig:lxe_nr_yield}。
+当$t_1=\pm1$时，$L_y=\langle L_y\rangle\pm\sigma_{L_y}$，$t_2=\pm1$时，$Q_y=\langle Q_y\rangle\pm\sigma_{Q_y}$。
+液氙核反冲量子产额的不确定度将是最重要的系统误差，$t_2$取$-1,0,1$时，$\mathrm{S2}$谱的变化如图\ref{fig:xe_rate_prediction_t2}。
+
+\begin{figure}
+  \centering
+  \includesvg[width=0.7\linewidth]{figures/xe_rate_prediction_t2.svg}
+  \caption{\label{fig:xe_rate_prediction_t2} S2-Only分析中的$\mathrm{S2}$谱，$\langle Q_y\rangle$为XENON1T测量的期望。}
+\end{figure}
+
+表\ref{tab:sys_error}总结了各种系统误差来源与取值，适用于本文所有灵敏度预测。
+
+\begin{table}
+  \centering
+  \caption{各种系统误差来源与取值}
+  \begin{tabular}{ccc}
+    \toprule
+    名称 & 符号 & 取值 \\
+    \midrule
+    反应堆中微子流强不确定度 & $\sigma_{\gamma_f}$ & $10\%$ \\
+    核反冲本底不确定度 & $\sigma_{\beta_1}$ & $10\%$ \\
+    电子反冲本底不确定度 & $\sigma_{\beta_2}$ & $10\%$ \\
+    核反冲光产额相对不确定度 & $t_1$ & 图\ref{fig:lxe_nr_yield} \\
+    核反冲电子产额相对不确定度 & $t_2$ & 图\ref{fig:lxe_nr_yield} \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:sys_error}
+\end{table}
+
+建立$\chi^2$，如式\ref{eq:nsi_ll}。
+
+\begin{align}
+    \label{eq:nsi_ll}
+    \chi^2 &= \sum_j\left[\frac{\left(N_{obs,j} - N_{exp,j}(\epsilon^{uV}_{ee}, \epsilon^{dV}_{ee}, t_2)(1 + \gamma_f) 
+    - \sum_{i}^2 B_{i,j}(1 + \beta_i)\right)^2}{\sigma^2_{stat,j}}\right] 
+    + t_2^2 + \sum_{i}^2(\frac{\beta_i}{\sigma^2_{\beta_i}})^2 + (\frac{\gamma_f}{\sigma^2_{\gamma_f}})^2
+\end{align}
+
+其中$j$遍历各$\mathrm{S2}$bins，$B_{i,j}$为本底在不同$\mathrm{S2}$bins上的期望，$\beta_i$为不确定度向期望的传递。
+取$\Delta chi^2=4.61$以确定二维参数上的90\%置信区间（confidential interval），如图\ref{fig:nsi_sensitivity_s2only}。
+
+\begin{figure}
+  \centering
+  \includesvg[width=0.7\linewidth]{figures/nsi_sensitivity_s2only.svg}
+  \caption{\label{fig:nsi_sensitivity_s2only} 一次S2-Only测量对中微子超标准模型有效参数的限制（绿色阴影）。
+  同时列出了COHERENT的首次结果作为对比\cite{akimov_observation_2017}。}
+\end{figure}
 
 \subsection{S1-S2分析}
+
+\begin{figure}
+  \centering
+  \includesvg[width=0.7\linewidth]{figures/nsi_sensitivity_s1s2.svg}
+  \caption{\label{fig:nsi_sensitivity_s1s2} 一次S1-S2测量对中微子超标准模型有效参数的限制（绿色阴影）。
+  同时列出了COHERENT的首次结果作为对比\cite{akimov_observation_2017}。}
+\end{figure}
 
 \section{低动量转移下的弱混合角测量}
 
