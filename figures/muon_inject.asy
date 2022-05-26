@@ -47,3 +47,5 @@ draw("$2.26\mathrm{m}$", X+Y -- X+Y+Z, align=X+Y+0.5Z, p=fontsize(10pt));
 
 draw("$\theta$", arc(-0.6X-0.3Y+1.5Z, -0.6X-0.3Y+0.9Z, -0.3X+0.0Y+0.9Z), align=-0.55X-0.25Y+1.0Z, Arrow3());
 draw("$\mu$", -0.6X-0.3Y+1.5Z -- -0.6X-0.3Y+1.5Z, align=-0.6X-0.3Y+1.5Z);
+
+// draw this figure, run in command line: `asy muon_inject.asy`
