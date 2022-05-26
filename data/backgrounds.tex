@@ -57,12 +57,12 @@ BambooMC具有较强的可拓展性，本文中使用基于BambooMC开发的软�
 液氙主探测器上下分别有64个1英寸光电倍增管：日本滨松R8520，共128个。光电倍增管的几何如图\ref{fig:pmt_geo}。
 
 \begin{figure}
-  \begin{subfigure}{.5\textwidth}
+  \begin{subfigure}{.52\textwidth}
     \centering
     \includegraphics[width=1.0\linewidth]{figures/pmt_geo.png}
     \caption{\label{fig:pmt_g4} R8520在Geant4中的几何}
   \end{subfigure}
-  \begin{subfigure}{.5\textwidth}
+  \begin{subfigure}{.48\textwidth}
     \centering
     \includesvg[width=1.0\linewidth]{figures/topPMTs.svg}
     \caption{\label{fig:pmt_layout} PMT在探测器$(x,y)$平面上的排布}
@@ -102,7 +102,7 @@ PMT石英窗上富集的${}^{40}\mathrm{K}$和${}^{137}\mathrm{Cs}$可能成为�
     \toprule
     名称 & 条件 \\
     \midrule
-    液氙反符合（LXe veto） & 反符合层中最大的电子（核）反冲不大于$100$（$500\si{keV}$） \\
+    液氙反符合（LXe veto） & 反符合层中最大的电子（核）反冲不大于$100$（$500$）$\si{keV}$ \\
     NR单次散射（ER SS cut） & 主探测器中第二大的NR能量不大于最大NR能量的5\% \\
     ER单次散射（NR SS cut） & 主探测器中第二大的ER能量不大于$1\si{keV}$ \\
     NR的ER标记（ER tagging） & 主探测器中与NR事件同时发生的ER不大于$10\si{keV}$ \\
@@ -116,8 +116,8 @@ PMT石英窗上富集的${}^{40}\mathrm{K}$和${}^{137}\mathrm{Cs}$可能成为�
 由于核反冲信号的淬灭效应，相同能量的核反冲和电子反冲产生的光子数不同，取淬灭因子（quenching factor）为0.2，
 则将反符合层的核反冲阈值设置为电子反冲的$1/0.2=5$倍。
 
-灵敏体积为高$24\si{cm}$，半径为$12\si{cm}$的圆柱，其中液氙总质量约为$30.5\si{kg}$。在S2-Only分析中，不使用$\mathrm{S1}$，
-信号将没有电子漂移距离$z$，但我们让然可以通过$\mathrm{S2}$波形的事件分布一定程度上判断事件发生的纵向位置，
+灵敏体积为高$24\si{cm}$，半径为$12\si{cm}$的圆柱，其中液氙总质量约为$30.5\si{kg}$。在S2-Only分析中，不引入$\mathrm{S1}$，
+事件将没有电子漂移距离$z$信息，但我们让然可以通过$\mathrm{S2}$波形的事件分布一定程度上判断事件发生的纵向位置，
 所以这里对S2-Only和S1-S2分析设置了相同的灵敏体积。
 
 \section{$\mu$子本底}
@@ -191,7 +191,7 @@ Shukla公式在低能区域和高能区域都与数据符合得较好。
     \centering
     \includesvg[width=1.0\linewidth]{figures/shukla_distribution.svg}
     \caption{\label{fig:shukla_distribution} Shukla公式中$\theta$和$E_\mu$的分布，$\theta$主要集中在夹角较小的区域，
-    因为天顶角更大的$\mu$子与大气层中物质的相互作用路程更长，损失更多；$E_\mu$主要集中在低能部分。}
+    因为天顶角更大的$\mu$子与大气层中物质的相互作用路程更长，损失更多；$E_\mu$的分布主要集中在低能部分。}
 \end{figure}
 
 对Shukla公式进行积分，可以得到海平面附近全能谱$\mu$子通量约为$150\si{m^{-2}\cdot s^{-1}}$。
@@ -211,7 +211,7 @@ $\mu$子电荷比在$\mu$子动量小于$100\si{GeV/c}$时与能量几乎无关�
   最顶部平面为$\mu$子初始位置，蓝色圆柱体为液氙探测器。}
 \end{figure}
 
-Geant4模拟中设置中心祝探测器和液氙反符合屏蔽层为灵敏探测器，并记录两种灵敏探测器中的能量沉积。
+Geant4模拟中设置中心探测器和液氙反符合屏蔽层为灵敏探测器，并记录两种灵敏探测器中的能量沉积。
 因液氙中相近时间且相近空间位置的能量沉积并不能被有效区分，
 得到模拟结果后将使用聚类算法DBSCAN（Density-Based Spatial Clustering of Applications with Noise）\cite{ester_density-based_1996,schubert_dbscan_2017}合并临近时空中的能量沉积。
 
@@ -263,11 +263,11 @@ $\mu$子带电，$\mu$子事件的电子反冲本底主要由$\mu$子在物质�
   \caption{\label{fig:muon_er_xyzr} $\mu$子引起的电子反冲经过筛选条件压低后的空间分布，在探测器上部分布略集中。}
 \end{figure}
 
-表\ref{tab:cuts_muon_remain}列出了几种筛选条件后的$\mu$子核反冲在$[0.1,1]\si{keV}$能区和电子反冲在的$[0,100]\si{keV}$能区剩余事例率。
+表\ref{tab:cuts_muon_remain}列出了几种筛选条件后的$\mu$子核反冲在$[0.1,1]\si{keV}$能区和电子反冲在的$[0,100]\si{keV}$能区剩余事例率，误差棒来自模拟事例个数的统计误差。
 
 \begin{table}
   \centering
-  \caption{$\mu$子引起的核反冲$\in[0.1,1]\si{keV}$和电子反冲$\in[0,100]\si{keV}$的本底剩余事例率}
+  \caption{$\mu$子引起的$[0.1,1]\si{keV}$内核反冲和$[0,100]\si{keV}$内电子反冲的本底剩余事例率}
   \begin{tabular}{ccc}
     \toprule
     筛选条件 & $T_\mathrm{nr}\left(10^{-2}\left(\si{kg}\cdot\si{day}\right)^{-1}\right)$ & $T_\mathrm{er}\left(10^{-3}\left(\si{kg}\cdot\si{keV}\cdot\si{day}\right)^{-1}\right)$ \\
@@ -334,7 +334,7 @@ BambooMC提供了\verb|DecayChainSplitting|功能用于模拟衰变链上的核�
   \label{tab:pmt_radio}
 \end{table}
 
-模拟中PMT的石英窗质量为$2\si{g}$，外科质量为$13.6\si{g}$。
+模拟中PMT的石英窗质量为$2\si{g}$，外壳质量为$13.6\si{g}$。
 
 \subsection{屏蔽体材料本底}
 
@@ -390,14 +390,14 @@ ${}^{85}\mathrm{Kr}$的丰度为${}^{85}\mathrm{Kr}/{}^\mathrm{nat}\mathrm{Kr}=(
   \centering
   \includesvg[width=1.0\linewidth]{figures/material_er_xyzr.svg}
   \caption{\label{fig:material_er_xyzr} 材料放射性电子反冲本底经过筛选条件压低后的空间分布，
-  在$(x,y)$和$(r^2,z)$投影上都比较均匀。}
+  略集中在灵敏体积边缘。}
 \end{figure}
 
-表\ref{tab:cuts_material_remain}列出了几种筛选条件后的材料放射性电子反冲本底在$[0,100]\si{keV}$能区剩余事例率。
+表\ref{tab:cuts_material_remain}列出了几种筛选条件后的材料放射性电子反冲本底在$[0,100]\si{keV}$能区剩余事例率，误差棒来自模拟事例个数的统计误差。
 
 \begin{table}
   \centering
-  \caption{$\mu$子引起的核反冲$\in[0.1,1]\si{keV}$和电子反冲$\in[0,100]\si{keV}$的本底剩余事例率}
+  \caption{材料放射性引起的$[0.1,1]\si{keV}$内核反冲和$[0,100]\si{keV}$内电子反冲的本底剩余事例率}
   \begin{tabular}{ccc}
     \toprule
     筛选条件 & $T_\mathrm{er}\left(10^{-3}\left(\si{kg}\cdot\si{keV}\cdot\si{day}\right)^{-1}\right)$ \\
@@ -405,8 +405,17 @@ ${}^{85}\mathrm{Kr}$的丰度为${}^{85}\mathrm{Kr}/{}^\mathrm{nat}\mathrm{Kr}=(
     无筛选条件 & $1821.0_{-4.1}^{+4.1}$ \\
     灵敏体积（FV cut） & $54.0_{-0.5}^{+0.5}$ \\
     液氙反符合（LXe veto） & $23.5_{-0.2}^{+0.2}$ \\
-    ER的ER标记（ER tagging） & $18.8_{-0.2}^{+0.2}$ \\
+    NR的ER标记（ER tagging） & $18.8_{-0.2}^{+0.2}$ \\
     \bottomrule
   \end{tabular}
   \label{tab:cuts_material_remain}
 \end{table}
+
+图\ref{fig:all_event_rate}是两种本底和信号的汇总，因核反冲信号的淬灭效应，取淬灭因子为0.2，
+将核反冲能量$T_\mathrm{nr}$乘淬灭因子转化后与电子反冲能量进行比较。
+
+\begin{figure}
+  \centering
+  \includesvg[width=0.8\linewidth]{figures/all_event_rate.svg}
+  \caption{\label{fig:all_event_rate} $\mu$子与材料的核反冲本底和电子反冲本底汇总，蓝色阴影为进行物理搜索的主要能区。}
+\end{figure}
