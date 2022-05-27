@@ -51,11 +51,11 @@ S2-Only分析仅使用$\mathrm{S2}$作为分析维度。$\epsilon_{ee}^{uV}=\eps
   \caption{\label{fig:xe_rate_prediction_t2} S2-Only分析中的$\mathrm{S2}$谱，$\langle Q_y\rangle$为XENON1T测量的期望。}
 \end{figure}
 
-表\ref{tab:sys_error}总结了各种系统误差来源与取值，适用于本文所有灵敏度预测。
+表\ref{tab:sys_error}总结了各种系统误差来源与取值，适用于本文所有LXeTPC上的灵敏度预测。
 
 \begin{table}
   \centering
-  \caption{各种系统误差来源与取值}
+  \caption{LXeTPC测量中各种系统误差来源与取值}
   \begin{tabular}{ccc}
     \toprule
     名称 & 符号 & 取值 \\
@@ -129,7 +129,51 @@ S1-S2分析将使用$\mathrm{S1}$不为0的事件进行分析，系统误差中�
   同时列出了COHERENT的首次结果作为对比\cite{akimov_observation_2017}。}
 \end{figure}
 
+\subsection{HPGe测量}
+
+利用高纯锗探测器进行反应堆中微子CE$\nu$NS测量的系统误差来源出了探测器源项意外，主要来自淬灭因子的不确定度和本底的不确定度。
+
+表\ref{tab:sys_error_ge}总结了各种系统误差来源与取值，适用于本文所有HPGe上的灵敏度预测。
+
+\begin{table}
+  \centering
+  \caption{HPGe测量中各种系统误差来源与取值}
+  \begin{tabular}{ccc}
+    \toprule
+    名称 & 符号 & 取值 \\
+    \midrule
+    电子反冲本底不确定度 & $\sigma_{\beta}$ & $10\%$ \\
+    淬灭因子不确定度 & $t_q$ & 图\ref{fig:ge_quenching_factor} \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:sys_error_ge}
+\end{table}
+
+直接在测量能谱中建立$\chi^2$，如式\ref{eq:nsi_ge_ll}。
+
+\begin{align}
+    \label{eq:nsi_ge_ll}
+    \begin{split}
+    \chi^2 =& \sum_j\left[\frac{\left(N_{obs,j} - N_{exp,j}(\epsilon^{uV}_{ee}, \epsilon^{dV}_{ee}, t_q)(1 + \gamma_f) 
+    - B_{j}(1 + \beta)\right)^2}{\sigma^2_{stat,j}}\right] \\
+    & + t_q^2 + (\frac{\beta}{\sigma^2_{\beta}})^2 + (\frac{\gamma_f}{\sigma^2_{\gamma_f}})^2
+    \end{split}
+\end{align}
+
+设置曝光量$5\si{kg\cdot y}$为。
+在$[0.15,0.5]\si{keV_{ee}}$能区范围中相应曝光量下CE$\nu$NS的总期望个数为1468.7，电子反冲本底的总期望个数为1355.5。
+类似地，可以给出测量对中微子超标准模型有效参数的限制，如图\ref{fig:nsi_sensitivity_ge}。
+
+\begin{figure}
+  \centering
+  \includesvg[width=0.7\linewidth]{figures/nsi_sensitivity_ge.svg}
+  \caption{\label{fig:nsi_sensitivity_ge} 一次HPGe探测器测量对中微子超标准模型有效参数的限制（红色阴影）。
+  同时列出了COHERENT的结果作为对比\cite{akimov_observation_2017}。}
+\end{figure}
+
 \section{低动量转移下的弱混合角测量}
+
+\subsection{S2-Only分析}
 
 CE$\nu$NS与弱相互作用中的基本常数有关，温伯格角（Weinberg angle）$\theta_W$通过式\ref{eq:cevns_theta}影响CE$\nu$NS的截面。
 
@@ -158,6 +202,26 @@ $\sin^2\theta_W$在不同动量转移下取值不同，成为``跑动的''耦合
 \end{figure}
 
 对比固定电子产额和考虑所有系统误差的结果，若可以控制系统误差，则可以大幅提升弱混合角测量的灵敏度。
+
+\subsection{HPGe测量}
+
+建立$\chi^2$，如式\ref{eq:theta_ge_ll}。
+
+\begin{align}
+    \label{eq:theta_ge_ll}
+    \begin{split}
+    \chi^2 =& \sum_j\left[\frac{\left(N_{obs,j} - N_{exp,j}(\sin^2\theta_W, t_q)(1 + \gamma_f) 
+    - B_{j}(1 + \beta)\right)^2}{\sigma^2_{stat,j}}\right] \\
+    & + t_q^2 + (\frac{\beta}{\sigma^2_{\beta}})^2 + (\frac{\gamma_f}{\sigma^2_{\gamma_f}})^2
+    \end{split}
+\end{align}
+
+\begin{figure}
+    \centering
+    \includesvg[width=0.7\linewidth]{figures/thetaw_sensitivity_ge.svg}
+    \caption{\label{fig:thetaw_sensitivity_ge} 一次HPGe探测器测量对弱混合角的限制。
+    红色实线为考虑了所有系统误差的结果，蓝色虚线不考虑淬灭因子的系统误差，即$t_q=0$的结果。}
+\end{figure}
 
 \section{低能核反冲的液氙光电产额测量}
 

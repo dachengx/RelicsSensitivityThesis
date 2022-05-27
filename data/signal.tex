@@ -141,7 +141,7 @@ $E_\nu$为中微子能量，$\phi(E_\nu)$为中微子能谱。计算中不考虑
     \caption{\label{fig:signal_flow} LXeTPC 中的信号传递过程。
     首先沉积的核反冲能量$T_{\mathrm{nr}}$或电子反冲能量$T_{\mathrm{er}}$转化为量子数：光子数$N_\gamma$和电子数$N_e$，
     光子在传递过程中的衰减由乘积$\epsilon_L\cdot\epsilon_\mathrm{QE}\cdot\epsilon_\mathrm{CE}$描述，并转化为PMT击中数$N_\mathrm{hit}$；
-    电子在门电极和阳极之间被拉出可能有一定损失，最终倍增$g_2$倍称为被探测到的光电子数目$\mathrm{S2}$。}
+    电子在门电极和阳极之间被拉出可能有一定损失，最终倍增$g_2$称为被探测到的光电子数目$\mathrm{S2}$。}
 \end{figure}
 
 光子数$N_\gamma$和电子数$N_e$用光电产额描述：
@@ -277,3 +277,54 @@ CE$\nu$NS事件大多不具有$\mathrm{S1}$或者$\mathrm{S1}$探测效率很低
 \end{table}
 
 \section{HPGe探测器的CE$\nu$NS信号}
+\label{sec:hpge_sig}
+
+反应堆中微子与锗元素的相互作用核反冲能谱为\ref{fig:cevns_event_rate}右图，可见低能区域事例率非常高，
+但低能事件的探测效率较低；而高能区域本底相比于信号事例率较高，所以需要选取合适的能区进行物理信号搜索。
+
+HPGe探测器对核反冲有一定的淬灭效应，淬灭因子$Q_F$于可视能量的关系为式\ref{eq:vis_q}。
+
+\begin{align}
+  \label{eq:vis_q}
+  T_\mathrm{vis} &= Q_F\cdot T_\mathrm{nr}
+\end{align}
+
+其中$T_\mathrm{vis}$为可视能量，单位一般写为$\si{keV_{ee}}$。淬灭因子可以从理论计算或实际测量得到\cite{zhao_search_2016}，
+本文中选用的淬灭因子及其不确定度如图\ref{fig:ge_quenching_factor}。
+
+\begin{figure}
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includesvg[width=1.0\linewidth]{figures/ge_quenching_factor.svg}
+    \caption{\label{fig:ge_quenching_factor} HPGe探测器的淬灭因子，及不确定度\cite{zhao_search_2016}}
+  \end{subfigure}
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includesvg[width=1.0\linewidth]{figures/ge_resolution.svg}
+    \caption{\label{fig:ge_resolution} HPGe探测器的能量分辨率}
+  \end{subfigure}
+  \caption{\label{fig:ge_qf_reso} $\si{kg}$量级的pPCGe探测器淬灭因子和能量分辨率。}
+\end{figure}
+
+在转化得到可视能量之后，需要考虑探测器的能量分辨率，使用CDEX-1实验测量拟合得到的结果，如图\ref{fig:ge_resolution}。
+
+对于低能量事件的探测效率较低，以下参考CDEX-10实验2018年测量结果\cite{jiang_limits_2018}，如图\ref{fig:ge_efficiency}。
+
+\begin{figure}
+  \centering
+  \includesvg[width=0.8\linewidth]{figures/ge_efficiency.svg}
+  \caption{\label{fig:ge_efficiency} $\si{kg}$量级的pPCGe探测器低能区域探测效率\cite{jiang_limits_2018}，
+  主要由触发效率和PN结测量效应决定。}
+\end{figure}
+
+综合以上考虑，得到淬灭效应、能量分辨率、探测效率之后的CE$\nu$NS信号能谱，如图\ref{fig:event_smear_Ge_rate_prediction}。
+
+\begin{figure}
+  \centering
+  \includesvg[width=0.8\linewidth]{figures/event_smear_Ge_rate_prediction.svg}
+  \caption{\label{fig:event_smear_Ge_rate_prediction} 
+  反应堆中微子信号在HPGe探测器中的预测能谱，本底水平参考CDEX-10实验2018年结果\cite{jiang_limits_2018}。
+  虚线为探测效率压低的信号和本底水平。}
+\end{figure}
+
+在$150\si{keV_{ee}}$以上，预计事例率为$614.7\si{kg^{-1}\cdot y^{-1}}$。
