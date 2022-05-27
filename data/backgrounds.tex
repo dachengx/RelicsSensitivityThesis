@@ -128,7 +128,7 @@ PMT石英窗上富集的${}^{40}\mathrm{K}$和${}^{137}\mathrm{Cs}$可能成为�
 
 \begin{figure}
     \centering
-    \includesvg[width=0.7\linewidth]{figures/vertical_flux.svg}
+    \includesvg[width=0.6\linewidth]{figures/vertical_flux.svg}
     \caption{\label{fig:vertical_flux} 宇宙线中不同粒子通量与大气深度的关系\cite{olive_review_2016}。
     $\mu$子和中微子是地面附近通量最高的两种粒子，中微子较少与物质发生相互作用，$\mu$子成为实验中的主要本底。}
 \end{figure}
@@ -189,7 +189,7 @@ Shukla公式在低能区域和高能区域都与数据符合得较好。
 
 \begin{figure}
     \centering
-    \includesvg[width=1.0\linewidth]{figures/shukla_distribution.svg}
+    \includesvg[width=0.8\linewidth]{figures/shukla_distribution.svg}
     \caption{\label{fig:shukla_distribution} Shukla公式中$\theta$和$E_\mu$的分布，$\theta$主要集中在夹角较小的区域，
     因为天顶角更大的$\mu$子与大气层中物质的相互作用路程更长，损失更多；$E_\mu$的分布主要集中在低能部分。}
 \end{figure}
@@ -233,7 +233,8 @@ $\mu$子主要通过两种方式产生核反冲。高能$\mu$子可以直接与�
 
 液氙反符合对$\mu$子核反冲的压低能力在我们关心的能区$[0.1,1]\si{keV}$最强，
 因为低能中子产生多次散射的概率不高，NR SS cut的压低能力并不显著，图中只有高能部分的NR被其显著压低。
-在施加筛选条件之后，$[0.1,1]\si{keV}$中的事例率为$0.30\left(\si{kg}\cdot\si{day}\right)^{-1}$，空间分布如图\ref{fig:muon_nr_xyzr}。
+在施加筛选条件之后，$[0.1,1]\si{keV}$中的事例率为$0.30\left(\si{kg}\cdot\si{day}\right)^{-1}$，
+空间分布如图\ref{fig:muon_nr_xyzr}。
 
 \begin{figure}
   \centering
@@ -270,14 +271,14 @@ $\mu$子带电，$\mu$子事件的电子反冲本底主要由$\mu$子在物质�
   \caption{$\mu$子引起的$[0.1,1]\si{keV}$内核反冲和$[0,100]\si{keV}$内电子反冲的本底剩余事例率}
   \begin{tabular}{ccc}
     \toprule
-    筛选条件 & $T_\mathrm{nr}\left(10^{-2}\left(\si{kg}\cdot\si{day}\right)^{-1}\right)$ & $T_\mathrm{er}\left(10^{-3}\left(\si{kg}\cdot\si{keV}\cdot\si{day}\right)^{-1}\right)$ \\
+    筛选条件 & NR事例率$\left(10^{-2}\left(\si{kg}\cdot\si{day}\right)^{-1}\right)$ & ER事例率$\left(10^{-3}\left(\si{kg}\cdot\si{keV}\cdot\si{day}\right)^{-1}\right)$ \\
     \midrule
-    无筛选条件 & $122.8_{-10.1}^{+11.0}$ & $44.9_{-2.0}^{+2.1}$ \\
-    灵敏体积（FV cut） & $96.8_{-10.4}^{+11.6}$ & $16.7_{-1.4}^{+1.5}$ \\
-    液氙反符合（LXe veto） & $32.7_{-5.8}^{+7.0}$ & $9.0_{-1.0}^{+1.1}$ \\
-    NR的ER标记（ER tagging） & $28.9_{-5.4}^{+6.6}$ & - \\
-    NR单次散射（NR SS cut） & $28.9_{-5.4}^{+6.6}$ & - \\
-    ER单次散射（ER SS cut） & - & $5.5_{-0.8}^{+0.9}$ \\
+    无筛选条件 & $115.2_{-1.3}^{+1.3}$ & $36.0_{-0.2}^{+0.2}$ \\
+    灵敏体积（FV cut） & $93.5_{-1.4}^{+1.4}$ & $14.2_{-0.2}^{+0.2}$ \\
+    液氙反符合（LXe veto） & $30.4_{-0.8}^{+0.8}$ & $7.4_{-0.1}^{+0.1}$ \\
+    NR的ER标记（ER tagging） & $23.5_{-0.7}^{+0.7}$ & - \\
+    NR单次散射（NR SS cut） & $23.5_{-0.7}^{+0.7}$ & - \\
+    ER单次散射（ER SS cut） & - & $4.9_{-0.1}^{+0.1}$ \\
     \bottomrule
   \end{tabular}
   \label{tab:cuts_muon_remain}
@@ -298,10 +299,10 @@ $\mu$子带电，$\mu$子事件的电子反冲本底主要由$\mu$子在物质�
 如${}^{238}\mathrm{U},{}^{232}\mathrm{Th},{}^{40}\mathrm{K}$等。
 PMT石英窗（主要成分为$\mathrm{Si}\mathrm{O}_2$）因为$\mathrm{Si}$与碱金属元素的亲和性，也含有一定量的${}^{40}\mathrm{K}$元素。
 这些核素的半衰期非常长，如${}^{238}\mathrm{U}$的半衰期为45亿年。
-如此长的半衰期使得，在矿石中这些核素与其衰变链上的子核将建立稳定平衡（secular equilibrium），具体表现为母核核素与子核核素的放射性活度相等。
+如此长的半衰期使得，在矿石中这些核素与其衰变链上的子核将建立长期平衡（secular equilibrium），具体表现为母核核素与子核核素的放射性活度相等。
 这对我们计算核素长衰变链上的放射性活度提供了便利。
-然而事实上对矿石的开采冶炼和一些其他过程可能会破坏稳定平衡，导致母核与子核核素的活度不等，此时为了估计材料放射性，就需要对进行实地测量，
-并以实地测量的结果作为蒙特卡洛的输入量。本文中假定稳定平衡不被破坏，即将长半衰期核素的活度作为全衰变链上子核的活度，
+然而事实上对矿石的开采冶炼和一些其他过程可能会破坏长期平衡，导致母核与子核核素的活度不等，此时为了估计材料放射性，就需要对进行实地测量，
+并以实地测量的结果作为蒙特卡洛的输入量。本文中假定长期平衡不被破坏，即将长半衰期核素的活度作为全衰变链上子核的活度，
 如认为${}^{238}\mathrm{U}$与其链上的${}^{226}\mathrm{Ra}$活度相等。
 
 金属中还可能含有${}^{60}\mathrm{Co}$等人工放射性核素和${}^{3}\mathrm{H}$等宇生放射性核素，在模拟中也将一并考虑。
@@ -400,7 +401,7 @@ ${}^{85}\mathrm{Kr}$的丰度为${}^{85}\mathrm{Kr}/{}^\mathrm{nat}\mathrm{Kr}=(
   \caption{材料放射性中$[0.1,1]\si{keV}$内核反冲和$[0,100]\si{keV}$内电子反冲的本底剩余事例率}
   \begin{tabular}{ccc}
     \toprule
-    筛选条件 & $T_\mathrm{er}\left(10^{-3}\left(\si{kg}\cdot\si{keV}\cdot\si{day}\right)^{-1}\right)$ \\
+    筛选条件 & 事例率$\left(10^{-3}\left(\si{kg}\cdot\si{keV}\cdot\si{day}\right)^{-1}\right)$ \\
     \midrule
     无筛选条件 & $1821.0_{-4.1}^{+4.1}$ \\
     灵敏体积（FV cut） & $74.1_{-0.6}^{+0.6}$ \\
@@ -420,7 +421,7 @@ ${}^{85}\mathrm{Kr}$的丰度为${}^{85}\mathrm{Kr}/{}^\mathrm{nat}\mathrm{Kr}=(
   \caption{\label{fig:all_event_rate} $\mu$子与材料的核反冲本底和电子反冲本底汇总，蓝色阴影为进行物理搜索的主要能区。}
 \end{figure}
 
-根据\ref{sec:lxe_signal}节中介绍的LXeTPC中的探测器响应，信号和本底的$\mathrm{S2}$电子谱为图\ref{fig:S2e_rate_bkg}。
+根据\ref{sec:lxe_signal}节中的LXeTPC响应，信号和本底的$\mathrm{S2}$电子谱为图\ref{fig:S2e_rate_bkg}。
 
 \begin{figure}
   \centering
