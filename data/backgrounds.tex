@@ -165,7 +165,7 @@ P.Shukla等人在考虑地球曲率的条件下给出了类似的分布\cite{shu
 \end{align}
 
 其中$I_0$为绝对流强，$N$为归一化参数，$n$为天顶角分布的幂次，$\epsilon_\mu,\frac{R}{d}$为经验公式中的自由参数。
-使用不同地点测量得到的$\mu$子分布可以拟合得到不同结果，这里我们使用Shukla通过日本筑波市附近的测量数据得到的拟合结果，具体参数见表\ref{tab:shukla}。
+使用不同地点测量得到的$\mu$子分布可以拟合得到不同结果，这里我们使用通过日本筑波市附近的测量数据得到的拟合结果，具体参数见表\ref{tab:shukla}。
 Shukla公式在低能区域和高能区域都与数据符合得较好。
 
 \begin{table}
@@ -197,7 +197,7 @@ Shukla公式在低能区域和高能区域都与数据符合得较好。
 对Shukla公式进行积分，可以得到海平面附近全能谱$\mu$子通量约为$150\si{m^{-2}\cdot s^{-1}}$。
 
 到达地面附近的$\mu$子包含了$\mu^-$和$\mu^+$。
-CMS于2010年测量得到了地表附近的$\mu$子电荷比（charge ratio, $I_{\mu^+}/I_{\mu^-}$）约为$1.2766\pm0.0045$\cite{the_cms_collaboration_measurement_2010}。
+CMS于2010年测量了地表附近的$\mu$子电荷比（charge ratio, $I_{\mu^+}/I_{\mu^-}$）约为$1.2766\pm0.0045$\cite{the_cms_collaboration_measurement_2010}。
 $\mu$子电荷比在$\mu$子动量小于$100\si{GeV/c}$时与能量几乎无关，且在更高动量的区域略增大。
 考虑到第\ref{sec:muon_nr}节中讨论的$\mu$子核反冲本底主要由较低能量的$\mu^-$贡献，更高的电荷比意味着更低的核反冲本底，本文保守地使用不随能量变化的电荷比。
 
@@ -240,7 +240,7 @@ $\mu$子主要通过两种方式产生核反冲。高能$\mu$子可以直接与�
   \centering
   \includesvg[width=1.0\linewidth]{figures/muon_nr_xyzr.svg}
   \caption{\label{fig:muon_nr_xyzr} $\mu$子引起的核反冲经过筛选条件压低后的空间分布，
-  在$(x,y)$和$(r^2,z)$投影上都比较均匀。}
+  能量沉积略集中在探测器边缘。}
 \end{figure}
 
 \subsection{电子反冲本底}
@@ -297,7 +297,7 @@ $\mu$子带电，$\mu$子事件的电子反冲本底主要由$\mu$子在物质�
 
 屏蔽体和罐体的材料主要为金属。金属矿石与长半衰期的原生放射性核素共生，
 如${}^{238}\mathrm{U},{}^{232}\mathrm{Th},{}^{40}\mathrm{K}$等。
-PMT石英窗（主要成分为$\mathrm{Si}\mathrm{O}_2$）因为$\mathrm{Si}$与碱金属元素的亲和性，也含有一定量的${}^{40}\mathrm{K}$元素。
+PMT石英窗（主要成分为$\mathrm{Si}\mathrm{O}_2$）因为$\mathrm{Si}$与碱金属元素的亲和性，也含有一定量的${}^{40}\mathrm{K}$。
 这些核素的半衰期非常长，如${}^{238}\mathrm{U}$的半衰期为45亿年。
 如此长的半衰期使得，在矿石中这些核素与其衰变链上的子核将建立长期平衡（secular equilibrium），具体表现为母核核素与子核核素的放射性活度相等。
 这对我们计算核素长衰变链上的放射性活度提供了便利。
@@ -406,7 +406,7 @@ ${}^{85}\mathrm{Kr}$的丰度为${}^{85}\mathrm{Kr}/{}^\mathrm{nat}\mathrm{Kr}=(
     无筛选条件 & $1821.0_{-4.1}^{+4.1}$ \\
     灵敏体积（FV cut） & $74.1_{-0.6}^{+0.6}$ \\
     液氙反符合（LXe veto） & $32.2_{-0.3}^{+0.3}$ \\
-    NR的ER标记（ER tagging） & $25.7_{-0.3}^{+0.3}$ \\
+    ER单次散射（ER SS cut） & $25.7_{-0.3}^{+0.3}$ \\
     \bottomrule
   \end{tabular}
   \label{tab:cuts_material_remain}
@@ -418,7 +418,7 @@ ${}^{85}\mathrm{Kr}$的丰度为${}^{85}\mathrm{Kr}/{}^\mathrm{nat}\mathrm{Kr}=(
 \begin{figure}
   \centering
   \includesvg[width=0.7\linewidth]{figures/all_event_rate.svg}
-  \caption{\label{fig:all_event_rate} $\mu$子与材料的核反冲本底和电子反冲本底汇总，蓝色阴影为进行物理搜索的主要能区。}
+  \caption{\label{fig:all_event_rate} $\mu$子与材料的本底汇总，蓝色阴影为进行物理搜索的主要能区。}
 \end{figure}
 
 根据\ref{sec:lxe_signal}节中的LXeTPC响应，信号和本底的$\mathrm{S2}$电子谱为图\ref{fig:S2e_rate_bkg}。
@@ -426,5 +426,5 @@ ${}^{85}\mathrm{Kr}$的丰度为${}^{85}\mathrm{Kr}/{}^\mathrm{nat}\mathrm{Kr}=(
 \begin{figure}
   \centering
   \includesvg[width=0.7\linewidth]{figures/S2e_rate_bkg.svg}
-  \caption{\label{fig:S2e_rate_bkg} $\mu$子与材料的核反冲本底和电子反冲本底电子谱，将使用4-10个电子的区域进行物理搜索。}
+  \caption{\label{fig:S2e_rate_bkg} $\mu$子与材料的本底电子谱，将使用4-10个电子的区域进行物理搜索。}
 \end{figure}
