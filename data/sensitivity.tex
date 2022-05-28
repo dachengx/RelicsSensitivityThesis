@@ -44,12 +44,13 @@ S2-Only分析仅使用$\mathrm{S2}$作为分析维度。$\epsilon_{ee}^{uV}=\eps
 液氙核反冲量子产额相对不确定度$t_1$和$t_2$分别对应核反冲中光和电子产额，
 本文采用2020年XENON1T的测量结果\cite{aprile_search_2021}，并向低能延拓，如图\ref{fig:lxe_nr_yield}。
 当$t_1=\pm1$时，$L_y=\langle L_y\rangle\pm\sigma_{L_y}$，$t_2=\pm1$时，$Q_y=\langle Q_y\rangle\pm\sigma_{Q_y}$。
-液氙核反冲量子产额的不确定度将是最重要的系统误差，$t_2$取$-1,0,1$时，$\mathrm{S2}$谱的变化如图\ref{fig:xe_rate_prediction_t2}。
+液氙核反冲量子产额的不确定度将是最重要的系统误差，$t_2$取$-1,0,1$时，$\mathrm{S2}$谱的变化如图\ref{fig:xe_rate_prediction_t2}，
+其中$\langle Q_y\rangle$为XENON1T测量的期望。
 
 \begin{figure}
   \centering
   \includesvg[width=0.7\linewidth]{figures/xe_rate_prediction_t2.svg}
-  \caption{\label{fig:xe_rate_prediction_t2} S2-Only分析中的$\mathrm{S2}$谱，$\langle Q_y\rangle$为XENON1T测量的期望。}
+  \caption{\label{fig:xe_rate_prediction_t2} S2-Only分析中的$\mathrm{S2}$谱}
 \end{figure}
 
 表\ref{tab:sys_error}总结了各种系统误差来源与取值，适用于本文所有LXeTPC上的灵敏度预测。
@@ -87,13 +88,13 @@ $N_{exp,j}$是$\epsilon^{uV}_{ee}$和$\epsilon^{dV}_{ee}$的函数。
 $B_{i,j}$为各种本底在不同$\mathrm{S2}$ bins上的期望，$\sigma_{stat,j}$描述观测量的统计涨落，
 $\beta_i$为各种本底可能的与最佳期望值的偏离，描述了不确定度向期望的传递。$\gamma_f$为反应堆中微子流强与最佳期望的偏离。
 取$\Delta \chi^2=\chi^2-\chi^2_\mathrm{min}=4.61$以确定二维参数上的90\%置信区间（confidential interval），
-某一次测量的参数置信区间如图\ref{fig:nsi_sensitivity_s2only}。
+某一次测量的参数置信区间如图\ref{fig:nsi_sensitivity_s2only}，
+同时列出了COHERENT的首次结果作为对比\cite{akimov_observation_2017}。
 
 \begin{figure}
   \centering
   \includesvg[width=0.7\linewidth]{figures/nsi_sensitivity_s2only.svg}
-  \caption{\label{fig:nsi_sensitivity_s2only} 一次S2-Only测量对中微子超标准模型有效参数的限制（绿色阴影）。
-  同时列出了COHERENT的首次结果作为对比\cite{akimov_observation_2017}。}
+  \caption{\label{fig:nsi_sensitivity_s2only} 一次S2-Only测量对中微子超标准模型有效参数的限制（绿色阴影）}
 \end{figure}
 
 借助反应堆中微子的高统计量和精细的本底控制，对超标准模型有效相互作用的测量将领先同类实验。
@@ -109,7 +110,7 @@ S1-S2分析将使用$\mathrm{S1}$不为0的事件进行分析，系统误差中�
 \begin{figure}
   \centering
   \includesvg[width=0.6\linewidth]{figures/exp_s1s2_t1t2.svg}
-  \caption{\label{fig:exp_s1s2_t1t2} 光电产额误差项$t_{1,2}$与CE$\nu$NS信号个数期望的对应关系。}
+  \caption{\label{fig:exp_s1s2_t1t2} 光电产额误差项$t_{1,2}$与CE$\nu$NS信号个数期望的对应关系}
 \end{figure}
 
 本文中仍以$\mathrm{S2}$作为分析维度建立$\chi^2$，如式\ref{eq:nsi_s1s2_ll}，其中参数定义同式\ref{eq:nsi_s2_ll}。
@@ -124,13 +125,13 @@ S1-S2分析将使用$\mathrm{S1}$不为0的事件进行分析，系统误差中�
 \end{align}
 
 取$\Delta \chi^2=4.61$以确定二维参数上的90\%置信区间，
-某一次测量的参数置信区间如图\ref{fig:nsi_sensitivity_s2only}。
+某一次测量的参数置信区间如图\ref{fig:nsi_sensitivity_s2only}，
+同时列出了COHERENT的首次结果作为对比\cite{akimov_observation_2017}。
 
 \begin{figure}
   \centering
   \includesvg[width=0.7\linewidth]{figures/nsi_sensitivity_s1s2.svg}
-  \caption{\label{fig:nsi_sensitivity_s1s2} 一次S1-S2测量对中微子超标准模型有效参数的限制（绿色阴影）。
-  同时列出了COHERENT的首次结果作为对比\cite{akimov_observation_2017}。}
+  \caption{\label{fig:nsi_sensitivity_s1s2} 一次S1-S2测量对中微子超标准模型有效参数的限制（绿色阴影）}
 \end{figure}
 
 S1-S2分析的置信区间比S2-Only分析得到的结果差，一方面因为光产额不确定度引入的系统误差，另一方面是因为要求信号中有$\mathrm{S1}$得到的统计量较低。
@@ -173,8 +174,7 @@ S1-S2分析的置信区间比S2-Only分析得到的结果差，一方面因为�
 \begin{figure}
   \centering
   \includesvg[width=0.7\linewidth]{figures/nsi_sensitivity_ge.svg}
-  \caption{\label{fig:nsi_sensitivity_ge} 一次HPGe探测器测量对中微子超标准模型有效参数的限制（红色阴影）。
-  同时列出了COHERENT的结果作为对比\cite{akimov_observation_2017}。}
+  \caption{\label{fig:nsi_sensitivity_ge} 一次HPGe探测器测量对中微子超标准模型有效参数的限制（红色阴影）}
 \end{figure}
 
 使用$5\si{kg\cdot y}$HPGe的测量结果，置信区间非常窄，因为$\mathrm{Ge}$原子质量较低，核反冲平均能量比使用$\mathrm{Xe}$进行的测量高，
@@ -201,14 +201,14 @@ $\sin^2\theta_W$在不同动量转移下取值不同，成为``跑动的''耦合
 \end{align}
 
 公式中的参数与式\ref{eq:nsi_s2_ll}意义相同，但此时$N_{exp,j}$是$\sin^2\theta_W$的函数。
-对弱混合角的某一次测量的参数置信区间如图\ref{fig:thetaw_sensitivity_s2only}。
+对弱混合角的某一次测量的参数置信区间如图\ref{fig:thetaw_sensitivity_s2only}，
+红色实线为考虑了所有系统误差的结果，蓝色虚线为不考虑电子产额系统误差，即$t_2=0$的结果。
+同时列出了PDG给出的$91.2\si{GeV/c}$动量转移和$\overline{\mathrm{MS}}$ scheme下的最佳拟合值\cite{particle_data_group_review_2020}。
 
 \begin{figure}
   \centering
   \includesvg[width=0.7\linewidth]{figures/thetaw_sensitivity_s2only.svg}
-  \caption{\label{fig:thetaw_sensitivity_s2only} 一次S2-Only测量对弱混合角的限制。
-  红色实线为考虑了所有系统误差的结果，蓝色虚线为不考虑电子产额系统误差，即$t_2=0$的结果。
-  同时列出了PDG给出的$91.2\si{GeV/c}$动量转移和$\overline{\mathrm{MS}}$ scheme下的最佳拟合值\cite{particle_data_group_review_2020}。}
+  \caption{\label{fig:thetaw_sensitivity_s2only} 一次S2-Only测量对弱混合角的限制}
 \end{figure}
 
 低能量的$\theta_W$测量结果发表较少，实验若成功则可以填补领域空白。
@@ -229,12 +229,13 @@ $\sin^2\theta_W$在不同动量转移下取值不同，成为``跑动的''耦合
 
 公式中的参数与式\ref{eq:nsi_s2_ll}意义相同，但此时$N_{exp,j}$是$\sin^2\theta_W$和$t_q$的函数。
 淬灭因子的不确定度通过$t_q$传递。
+对弱混合角的某一次测量的参数置信区间如图\ref{fig:thetaw_sensitivity_ge}，
+红色实线为考虑了所有系统误差的结果，蓝色虚线不考虑淬灭因子的系统误差，即$t_q=0$的结果。
 
 \begin{figure}
     \centering
     \includesvg[width=0.7\linewidth]{figures/thetaw_sensitivity_ge.svg}
-    \caption{\label{fig:thetaw_sensitivity_ge} 一次HPGe探测器测量对弱混合角的限制。
-    红色实线为考虑了所有系统误差的结果，蓝色虚线不考虑淬灭因子的系统误差，即$t_q=0$的结果。}
+    \caption{\label{fig:thetaw_sensitivity_ge} 一次HPGe探测器测量对弱混合角的限制}
 \end{figure}
 
 使用$5\si{kg\cdot y}$HPGe的测量结果优于液氙的测量结果，同时对比红色实线和蓝色虚线，淬灭因子系统误差对灵敏度的影响也很大。
@@ -256,13 +257,14 @@ $\sin^2\theta_W$在不同动量转移下取值不同，成为``跑动的''耦合
     \end{split}
 \end{align}
 
-图\ref{fig:qy_sensitivity_s2only}为一次S2-Only测量结果对于$Q_y$的限制，因CE$\nu$NS的统计量达到几千，对$Q_y$的测量将达到前所未有的精度。
+图\ref{fig:qy_sensitivity_s2only}为一次S2-Only测量结果对于$Q_y$的限制（红色实线），
+同时列出了XENON1T的${}^{8}\mathrm{B}$中微子测量结果作为对比\cite{aprile_search_2021}。
+因CE$\nu$NS的统计量达到几千，对$Q_y$的测量将达到前所未有的精度。
 
 \begin{figure}
   \centering
   \includesvg[width=0.7\linewidth]{figures/qy_sensitivity_s2only.svg}
-  \caption{\label{fig:qy_sensitivity_s2only} 一次S2-Only测量对液氙电子产额的限制（红色实线）。
-  同时列出了XENON1T的${}^{8}\mathrm{B}$中微子测量结果作为对比\cite{aprile_search_2021}。}
+  \caption{\label{fig:qy_sensitivity_s2only} 一次S2-Only测量对液氙电子产额的限制}
 \end{figure}
 
 图\ref{fig:qy_sensitivity_s2only}红线所示精度的测量结果将对暗物质实验和机遇液氙的太阳中微子实验有提升作用。
@@ -280,13 +282,13 @@ $\sin^2\theta_W$在不同动量转移下取值不同，成为``跑动的''耦合
     \end{split}
 \end{align}
 
-图\ref{fig:ly_sensitivity_s1s2}为一次S1-S2测量结果对于$L_y$的限制。
+图\ref{fig:ly_sensitivity_s1s2}为一次S1-S2测量结果对于$L_y$的限制（红色实线），
+同时列出了XENON1T的测量结果\cite{aprile_search_2021}和LUX 2016年测量结果\cite{lux_collaboration_low-energy_2016}作为对比。
 
 \begin{figure}
   \centering
   \includesvg[width=0.7\linewidth]{figures/ly_sensitivity_s1s2.svg}
-  \caption{\label{fig:ly_sensitivity_s1s2} 一次S2-Only测量对液氙光产额的限制（红色实线）。
-  同时列出了XENON1T的测量结果\cite{aprile_search_2021}和LUX 2016年测量结果\cite{lux_collaboration_low-energy_2016}作为对比。}
+  \caption{\label{fig:ly_sensitivity_s1s2} 一次S2-Only测量对液氙光产额的限制}
 \end{figure}
 
 S1-S2分析同样受限于统计量，但测量光产额则必须使用$\mathrm{S1}$作为分析维度。类似地，对低能核反冲光产额测量结果的提升将有利于基于液氙的轻质量暗物质搜索。

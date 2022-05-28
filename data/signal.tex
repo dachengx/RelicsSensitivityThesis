@@ -10,7 +10,13 @@
 ${}^{235}\mathrm{U},{}^{238}\mathrm{U},{}^{239}\mathrm{Pu},{}^{241}\mathrm{Pu}$\cite{juno_collaboration_tao_2020}。
 反应堆中可裂变核素均为富中子核素，其裂变碎片也是富中子核素，可以发生$\beta$衰变放出电子（$\beta$射线）和电子反中微子。
 每一次核裂变后会伴随约6次$\beta$衰变和中微子发射，热中子堆每吉瓦（$10^{9}\si{W},\si{GW}$）热功率将每秒产生$2\times10^{20}$个电子反中微子。
-这些中微子的能谱是几千种裂变碎片的$\beta$衰变中微子能谱的叠加，见图\ref{fig:fission}。裂变产物的复杂性对于精确地计算反应堆中微子能谱是不利的。
+这些中微子的能谱是几千种裂变碎片的$\beta$衰变中微子能谱的叠加，见图\ref{fig:fission}。
+典型裂变核素${}^{235}\mathrm{U}$的产物，如${}^{92}\mathrm{Kr}$和${}^{141}\mathrm{Ba}$均为$\beta$衰变核素，
+见图\subref{fig:nuclear_fission}；
+裂变碎片成分十分复杂，热中子裂变条件下，${}^{235}\mathrm{U}$和${}^{239}\mathrm{Pu}$裂变碎片的质量与产额关系中，
+碎片质量将以裂变核素质量的一半为轴，几乎左右对称，并形成两个峰\cite{crouch_fission-product_1977}，
+见图\subref{fig:fission_yield}。
+裂变产物的复杂性对于精确地计算反应堆中微子能谱是非常不利的。
 
 \begin{figure}
   \begin{subfigure}{.35\textwidth}
@@ -23,7 +29,7 @@ ${}^{235}\mathrm{U},{}^{238}\mathrm{U},{}^{239}\mathrm{Pu},{}^{241}\mathrm{Pu}$\
     \includesvg[width=1.0\linewidth]{figures/fission_yield.svg}
     \caption{\label{fig:fission_yield} ${}^{235}\mathrm{U}$和${}^{239}\mathrm{Pu}$的热中子裂变产额}
   \end{subfigure}
-  \caption{\label{fig:fission} 热中子堆中的裂变过程。典型裂变核素${}^{235}\mathrm{U}$的产物，如${}^{92}\mathrm{Kr}$和${}^{141}\mathrm{Ba}$均为$\beta$衰变核素，见图\subref{fig:nuclear_fission}；裂变碎片成分十分复杂，热中子裂变条件下，${}^{235}\mathrm{U}$和${}^{239}\mathrm{Pu}$裂变碎片的质量与产额关系中，碎片质量将以裂变核素质量的一半为轴，几乎左右对称，并形成两个峰\cite{crouch_fission-product_1977}，见图\subref{fig:fission_yield}。}
+  \caption{\label{fig:fission} 热中子堆中的裂变过程}
 \end{figure}
 
 目前有两种反应堆中微子能谱模型。2011年前，最常用的反应堆中微子能谱为ILL-Vogel模型，其中${}^{235}\mathrm{U}$、${}^{239}\mathrm{Pu}$和${}^{241}\mathrm{Pu}$的
@@ -34,13 +40,15 @@ ILL-Vogel模型与2011年前的反应堆中微子实验的结果吻合\cite{an_i
 得到的中微子能谱相对于测量结果有超出。
 
 在灵敏度预测中高能（超过2$\si{MeV}$）中微子的能谱$s_i(E_\nu)$输入（$i=1\cdots4$，遍历四种裂变核素），将使用Huber-Mueller模型，其中${}^{235}\mathrm{U}$、${}^{239}\mathrm{Pu}$和${}^{241}\mathrm{Pu}$参考P.Huber的计算结果\cite{huber_determination_2011}，${}^{238}\mathrm{U}$参考T.A.Mueller的计算结果\cite{mueller_improved_2011}；
-在低能（$0-2\si{MeV}$）区域，将使用P.Vogel的理论计算能谱\cite{p_vogel_neutrino_1989}，见图\ref{fig:neutrino_energy_spectrum}。本文中将反应堆将只以裂变产物$\beta$衰变放出的电子反中微子作为中微子源。
+在低能（$0-2\si{MeV}$）区域，将使用P.Vogel的理论计算能谱\cite{p_vogel_neutrino_1989}，见图\ref{fig:neutrino_energy_spectrum}。
+因逆$\beta$衰变反应有约$1.8\si{MeV}$的阈值，所以虽然低能中微子占总流强的主要部分，
+但未被Daya Bay等反应堆中微子实验测量到\cite{an_improved_2017}
+本文中将反应堆将只以裂变产物$\beta$衰变放出的电子反中微子作为中微子源。
 
 \begin{figure}
     \centering
     \includesvg[width=0.7\linewidth]{figures/neutrino_energy_spectrum.svg}
-    \caption{\label{fig:neutrino_energy_spectrum} 灵敏度预测中使用的各种核素的中微子能谱，
-    因逆$\beta$衰变反应有约$1.8\si{MeV}$的阈值，所以虽然低能中微子占总流强的主要部分，但未被Daya Bay等反应堆中微子实验测量到\cite{an_improved_2017}。}
+    \caption{\label{fig:neutrino_energy_spectrum} 灵敏度预测中使用的各种核素的中微子能谱}
 \end{figure}
 
 为了计算反应堆中微子的总能谱和总流强，需要引入裂变核素每次裂变的平均释放能量$e_i$，已有较精确的理论计算\cite{ma_improved_2013}，见表\ref{tab:per_fission}：
@@ -79,7 +87,7 @@ $f_i(t)$为裂变份额（fission fraction），指四种核素的裂变次数�
 \begin{figure}
     \centering
     \includesvg[width=0.7\linewidth]{figures/fission_fraction.svg}
-    \caption{\label{fig:fission_fraction} 大亚湾核电站反应堆一个典型的核燃料循环中，裂变份额随着燃耗深度的变化\cite{an_evolution_2017}。}
+    \caption{\label{fig:fission_fraction} 大亚湾核电站反应堆一个典型的核燃料循环中，裂变份额随着燃耗深度的变化\cite{an_evolution_2017}}
 \end{figure}
 
 在本文中，简化考虑反应堆能谱形状和绝对强度的时间演化，即认为$f_i(t)=f_i,W(t)=W$。
@@ -89,17 +97,17 @@ LXeTPC实验将选址在山东石岛湾核电站（Shidao Bay Nuclear Power Plan
     \centering
     % \includepdf[width=0.7\linewidth]{figures/shidaowan.pdf}
     \includegraphics[width=1.0\linewidth]{figures/shidaowan.pdf}
-    \caption{\label{fig:shidaowan} 计划中的LXeTPC实验的选址位置。图片来源：Google Maps.\cite{shidaowan_googlemap_220524}。}
+    \caption{\label{fig:shidaowan} 计划中的LXeTPC实验的选址位置。图片来源：Google Maps.\cite{shidaowan_googlemap_220524}}
 \end{figure}
 
-至此我们可以计算得到总的反应堆中微子能谱$\phi\left(E_\nu\right)$，如图\ref{fig:neutrino_flux_spectrum}：
+至此我们可以计算得到总的反应堆中微子能谱$\phi\left(E_\nu\right)$，如图\ref{fig:neutrino_flux_spectrum}，
+在堆芯距离12$\si{m}$处，反应堆中微子总通量可以达到$2.5\times 10^{12}\si{cm^{-2}s^{-1}}$，作为对比，
+JUNO-TAO实验选址的台山核电站（热功率$4.6\si{GW}$）堆芯附近$30\si{m}$处中微子总通量可以达到$7.4\times 10^{12}\si{cm^{-2}s^{-1}}$\cite{juno_collaboration_tao_2020}。
 
 \begin{figure}
     \centering
     \includesvg[width=0.7\linewidth]{figures/neutrino_flux_spectrum.svg}
-    \caption{\label{fig:neutrino_flux_spectrum} 石岛湾核电站反应堆中微子能谱，只考虑单堆芯。
-    在堆芯距离12$\si{m}$处，反应堆中微子总通量可以达到$2.5\times 10^{12}\si{cm^{-2}s^{-1}}$，
-    作为对比，JUNO-TAO实验选址的台山核电站（热功率$4.6\si{GW}$）堆芯附近$30\si{m}$处中微子总通量可以达到$7.4\times 10^{12}\si{cm^{-2}s^{-1}}$\cite{juno_collaboration_tao_2020}。}
+    \caption{\label{fig:neutrino_flux_spectrum} 石岛湾核电站反应堆中微子能谱，只考虑单堆芯}
 \end{figure}
 
 反应堆中微子通过探测器时，探测介质与中微子发生CE$\nu$NS反应的事例率与中微子能量的关系为$S'(E_\nu)$：
@@ -120,28 +128,29 @@ $E_\nu$为中微子能量，$\phi(E_\nu)$为中微子能谱。计算中不考虑
     S(T_{\mathrm{nr}}) &= \frac{1}{4\pi L^2}\int\phi(E_\nu)\sum_j N_j\cdot \frac{\mathrm{d}\sigma_j(E_\nu)}{\mathrm{d}T}\mathrm{d}E_\nu
 \end{align}
 
+如图\ref{fig:cevns_event_rate}，
+因为氙原子核普遍比锗原子核重，所以以氙为介质的核反冲能谱向低能偏移。
+不考虑探测效率，氙探测器中$0.5\si{keV_{\mathrm{nr}}}$以上的核反冲可以达到$228.1\si{kg^{-1}y^{-1}}$，
+锗探测器中$1.0\si{keV_{\mathrm{nr}}}$以上的核反冲可以达到$69.3\si{kg^{-1}y^{-1}}$
+
 \begin{figure}
     \centering
     \includesvg[width=1.0\linewidth]{figures/cevns_event_rate.svg}
-    \caption{\label{fig:cevns_event_rate} 氙（左图）与锗（右图）两种介质探测CE$\nu$NS的核反冲能分布（事例率）。
-    因为氙原子核普遍比锗原子核重，所以以氙为介质的核反冲能谱向低能偏移。
-    不考虑探测效率，氙探测器中$0.5\si{keV_{\mathrm{nr}}}$以上的核反冲可以达到$228.1\si{kg^{-1}y^{-1}}$，
-    锗探测器中$1.0\si{keV_{\mathrm{nr}}}$以上的核反冲可以达到$69.3\si{kg^{-1}y^{-1}}$。}
+    \caption{\label{fig:cevns_event_rate} 氙（左图）与锗（右图）两种介质探测CE$\nu$NS的核反冲能分布（事例率）}
 \end{figure}
 
 \section{LXeTPC探测CE$\nu$NS信号}
 \label{sec:lxe_signal}
 
 第\ref{sec:basic_response}章中讨论过液氙中基本的微观过程，在本文简化的信号模型中，$\mathrm{S1}$和$\mathrm{S2}$由一系列正比过程决定，
-如图\ref{fig:signal_flow}。
+如图\ref{fig:signal_flow}。首先沉积的核反冲能量$T_{\mathrm{nr}}$或电子反冲能量$T_{\mathrm{er}}$转化为量子数：光子数$N_\gamma$和电子数$N_e$，
+光子在传递过程中的衰减由乘积$\epsilon_L\cdot\epsilon_\mathrm{QE}\cdot\epsilon_\mathrm{CE}$描述，并转化为PMT击中数$N_\mathrm{hit}$；
+电子在门电极和阳极之间被拉出可能有一定损失，最终倍增$g_2$称为被探测到的光电子数目$\mathrm{S2}$。
 
 \begin{figure}
     \centering
     \includegraphics[width=1.0\linewidth]{figures/signal_flow.pdf}
-    \caption{\label{fig:signal_flow} LXeTPC 中的信号传递过程。
-    首先沉积的核反冲能量$T_{\mathrm{nr}}$或电子反冲能量$T_{\mathrm{er}}$转化为量子数：光子数$N_\gamma$和电子数$N_e$，
-    光子在传递过程中的衰减由乘积$\epsilon_L\cdot\epsilon_\mathrm{QE}\cdot\epsilon_\mathrm{CE}$描述，并转化为PMT击中数$N_\mathrm{hit}$；
-    电子在门电极和阳极之间被拉出可能有一定损失，最终倍增$g_2$称为被探测到的光电子数目$\mathrm{S2}$。}
+    \caption{\label{fig:signal_flow} LXeTPC 中的信号传递过程}
 \end{figure}
 
 光子数$N_\gamma$和电子数$N_e$用光电产额描述：
@@ -153,21 +162,21 @@ $E_\nu$为中微子能量，$\phi(E_\nu)$为中微子能谱。计算中不考虑
 \end{align}
 
 其中成绩能量$\varepsilon$可以取$T_{\mathrm{nr}}$或$T_{\mathrm{er}}$。
-电子反冲的光电产额用NEST模型描述：
+电子反冲的光电产额用NEST模型描述，如图\ref{fig:lxe_er_yield}。
 
 \begin{figure}
     \centering
     \includesvg[width=1.0\linewidth]{figures/lxe_er_yield.svg}
-    \caption{\label{fig:lxe_er_yield} NEST模型中的低能电子反冲光电产额\cite{lenardo_global_2015,jason_brodsky_chris_tunnell_mszydagis_jbalajth_vetri_velan_junying_huang_2019}。}
+    \caption{\label{fig:lxe_er_yield} NEST模型中的低能电子反冲光电产额\cite{lenardo_global_2015,jason_brodsky_chris_tunnell_mszydagis_jbalajth_vetri_velan_junying_huang_2019}}
 \end{figure}
 
-2020年XENON1T实验测量了太阳${}^{8}B$中微子的CE$\nu$NS信号\cite{aprile_search_2021}，本文中液氙中低能核反冲光电产额使用该结果：
+2020年XENON1T实验测量了太阳${}^{8}B$中微子的CE$\nu$NS信号\cite{aprile_search_2021}，本文中液氙中低能核反冲光电产额使用该结果，
+如图\ref{fig:lxe_nr_yield}，NEST模型提供的核反冲产额与其有一定差异。
 
 \begin{figure}
     \centering
     \includesvg[width=1.0\linewidth]{figures/lxe_nr_yield.svg}
-    \caption{\label{fig:lxe_nr_yield} 低能核反冲光电产额\cite{aprile_search_2021,jason_brodsky_chris_tunnell_mszydagis_jbalajth_vetri_velan_junying_huang_2019}，
-    本文信号模型中采用2020年XENON1T的结果，NEST模型提供的核反冲产额与其有一定差异。}
+    \caption{\label{fig:lxe_nr_yield} 低能核反冲光电产额\cite{aprile_search_2021,jason_brodsky_chris_tunnell_mszydagis_jbalajth_vetri_velan_junying_huang_2019}}
 \end{figure}
 
 \subsection{S2-Only分析}
@@ -186,7 +195,9 @@ CE$\nu$NS事件大多不具有$\mathrm{S1}$或者$\mathrm{S1}$探测效率很低
 \end{align}
 
 其中取$g_2=20,\Delta g_2=6.67$。由此我们可以计算得到CE$\nu$NS事件的电子谱和$\mathrm{S2}$分布，
-比较信号本底在分析维度上的分布，对确定感兴趣的分析区域（region of interest, ROI）很重要，如图\ref{fig:S2eS2_rate}：
+比较信号本底在分析维度上的分布，对确定感兴趣的分析区域（region of interest, ROI）很重要，如图\ref{fig:S2eS2_rate}，
+随着$N_e$或$\mathrm{S2}$上升，分布的权重迅速降低，说明对低能事件的探测对实验至关重要。
+两图中浅蓝色阴影是感兴趣的分析区域，其上阈将在第\ref{sec:backgrounds}章中讨论。
 
 \begin{figure}
   \begin{subfigure}{.5\textwidth}
@@ -199,9 +210,7 @@ CE$\nu$NS事件大多不具有$\mathrm{S1}$或者$\mathrm{S1}$探测效率很低
     \includesvg[width=1.0\linewidth]{figures/S2_rate.svg}
     \caption{\label{fig:S2_rate} CE$\nu$NS事件中的$\mathrm{S2}$分布}
   \end{subfigure}
-  \caption{\label{fig:S2eS2_rate} CE$\nu$NS事件中的电子个数$N_e$和$\mathrm{S2}$分布。
-  随着$N_e$或$\mathrm{S2}$上升，分布的权重迅速降低，说明对低能事件的探测对实验至关重要。
-  两图中浅蓝色阴影是感兴趣的分析区域，其上阈将在第\ref{sec:backgrounds}章中讨论。}
+  \caption{\label{fig:S2eS2_rate} CE$\nu$NS事件中的电子个数$N_e$和$\mathrm{S2}$分布}
 \end{figure}
 
 降低探测器的能量下阈对十分重要。本文灵敏度计算中认为探测器对4个及以上的电子的探测效率为100\%；
@@ -209,13 +218,13 @@ CE$\nu$NS事件大多不具有$\mathrm{S1}$或者$\mathrm{S1}$探测效率很低
 对应的$\mathrm{S2}$下阈取$80\mathrm{PE}$。
 
 低能反应堆中微子在探测器沉积的能量有更小的几率产生超过$\mathrm{S2}$下阈信号，
-所以通过CE$\nu$NS反应道测量的反应堆中微子大多具有较高能量，见图\ref{fig:neutrino_efficiency}。
+所以通过CE$\nu$NS反应道测量的反应堆中微子大多具有较高能量，见图\ref{fig:neutrino_efficiency}，
+可见没有$4\si{MeV}$以下的中微子被探测到，CE$\nu$NS测量将有可能对反应堆中微子高能区域能谱的理论计算敏感。
 
 \begin{figure}
     \centering
     \includesvg[width=0.7\linewidth]{figures/neutrino_efficiency.svg}
-    \caption{\label{fig:neutrino_efficiency} $\mathrm{S2}$下阈取$80\mathrm{PE}$时探测到的CE$\nu$NS信号对应的中微子能量分布。
-    可见没有$4\si{MeV}$以下的中微子被探测到，CE$\nu$NS测量将有可能对反应堆中微子高能区域能谱的理论计算敏感。}
+    \caption{\label{fig:neutrino_efficiency} $\mathrm{S2}$下阈取$80\mathrm{PE}$时探测到的CE$\nu$NS信号对应的中微子能量分布}
 \end{figure}
 
 \subsection{S1-S2分析}
@@ -241,14 +250,15 @@ CE$\nu$NS事件大多不具有$\mathrm{S1}$或者$\mathrm{S1}$探测效率很低
 双光电子概率$p_\mathrm{dpe}$取为0.2，PMT电荷分布的展宽用正态分布或伽马分布（Gamma distribution）描述，其标准差$\sigma_q$取为0.5。
 但实际上反应堆中微子能产生的$T_\mathrm{nr}$很低，产生的光信号很少，$\mathrm{S1}$携带信息较少，后续所有分析仅在$N_\mathrm{hit}$维度进行。
 
-对于较小的$\mathrm{S1}$，触发和波形分类效率较低，我们使用接收率曲线来描述探测效率，如图\ref{fig:s1_hits_pe}。
+对于较小的$\mathrm{S1}$，触发和波形分类效率较低，我们使用接收率曲线来描述探测效率，如图\ref{fig:s1_hits_pe}，
+接收率曲线在$N_\mathrm{hit}\le1$时取0。右图同时要求$\mathrm{S2}>80\si{PE}$，
+$N_\mathrm{hit}$主要集中在$N_\mathrm{hit}=2$的bar中。
 
 \begin{figure}
     \centering
     \includesvg[width=1.0\linewidth]{figures/s1_hits_pe.svg}
     \caption{\label{fig:s1_hits_pe} CE$\nu$NS信号$N_\mathrm{hit}$和$\mathrm{S1}$的接收率（左图），
-    CE$\nu$NS信号$N_\mathrm{hit}$分布（右图，同时要求$\mathrm{S2}>80\si{PE}$）。接收率曲线在$N_\mathrm{hit}\le1$时取0。
-    $N_\mathrm{hit}$主要集中在$N_\mathrm{hit}=2$的bar中。}
+    CE$\nu$NS信号$N_\mathrm{hit}$分布（右图）}
 \end{figure}
 
 因$N_\mathrm{hit}$分布较窄，后续S1-S2分析中仍将以$\mathrm{S2}$为分析维度，只要求S1-S2事件的$N_\mathrm{hit}\ge2$。
@@ -303,28 +313,29 @@ HPGe探测器对核反冲有一定的淬灭效应，淬灭因子$Q_F$与可视�
     \includesvg[width=1.0\linewidth]{figures/ge_resolution.svg}
     \caption{\label{fig:ge_resolution} HPGe探测器的能量分辨率}
   \end{subfigure}
-  \caption{\label{fig:ge_qf_reso} $\si{kg}$量级的pPCGe探测器淬灭因子和能量分辨率。}
+  \caption{\label{fig:ge_qf_reso} $\si{kg}$量级的pPCGe探测器淬灭因子和能量分辨率}
 \end{figure}
 
 在转化得到可视能量之后，需要考虑探测器的能量分辨率，使用CDEX-1实验测量拟合得到的结果，如图\ref{fig:ge_resolution}。
 
-对于低能量事件的探测效率较低，以下参考CDEX-10实验2018年测量结果\cite{jiang_limits_2018}，如图\ref{fig:ge_efficiency}。
+对于低能量事件的探测效率较低，以下参考CDEX-10实验2018年测量结果\cite{jiang_limits_2018}，
+如图\ref{fig:ge_efficiency}，主要由触发效率和PN结测量效应决定。
 
 \begin{figure}
   \centering
   \includesvg[width=0.8\linewidth]{figures/ge_efficiency.svg}
-  \caption{\label{fig:ge_efficiency} $\si{kg}$量级的pPCGe探测器低能区域探测效率\cite{jiang_limits_2018}，
-  主要由触发效率和PN结测量效应决定。}
+  \caption{\label{fig:ge_efficiency} $\si{kg}$量级的pPCGe探测器低能区域探测效率\cite{jiang_limits_2018}}
 \end{figure}
 
-综合以上考虑，得到淬灭效应、能量分辨率、探测效率之后的CE$\nu$NS信号能谱，如图\ref{fig:event_smear_Ge_rate_prediction}。
+综合以上考虑，得到淬灭效应、能量分辨率、探测效率之后的CE$\nu$NS信号能谱，
+如图\ref{fig:event_smear_Ge_rate_prediction}，本底水平参考CDEX-10实验2018年结果\cite{jiang_limits_2018}，
+虚线为探测效率压低的信号和本底水平。
 
 \begin{figure}
   \centering
   \includesvg[width=0.8\linewidth]{figures/event_smear_Ge_rate_prediction.svg}
   \caption{\label{fig:event_smear_Ge_rate_prediction} 
-  反应堆中微子信号在HPGe探测器中的预测能谱，本底水平参考CDEX-10实验2018年结果\cite{jiang_limits_2018}。
-  虚线为探测效率压低的信号和本底水平。}
+  反应堆中微子信号在HPGe探测器中的预测能谱}
 \end{figure}
 
 在$150\si{keV_{ee}}$以上，预计事例率为$614.7\si{kg^{-1}\cdot y^{-1}}$。
