@@ -77,15 +77,15 @@ S2-Only分析仅使用$\mathrm{S2}$作为分析维度。$\epsilon_{ee}^{uV}=\eps
 \begin{align}
     \label{eq:nsi_s2_ll}
     \begin{split}
-    \chi^2 =& \sum_j\left[\frac{\left(N_{obs,j} - N_{exp,j}(\epsilon^{uV}_{ee}, \epsilon^{dV}_{ee}, t_2)(1 + \gamma_f) 
-    - \sum_{i}^2 B_{i,j}(1 + \beta_i)\right)^2}{\sigma^2_{stat,j}}\right] \\
+    \chi^2 =& \sum_j\left[\frac{\left(N_{\mathrm{obs},j} - N_{\mathrm{exp},j}(\epsilon^{uV}_{ee}, \epsilon^{dV}_{ee}, t_2)(1 + \gamma_f) 
+    - \sum_{i}^2 B_{i,j}(1 + \beta_i)\right)^2}{\sigma^2_{\mathrm{stat},j}}\right] \\
     & + t_2^2 + \sum_{i}^2(\frac{\beta_i}{\sigma^2_{\beta_i}})^2 + (\frac{\gamma_f}{\sigma^2_{\gamma_f}})^2
     \end{split}
 \end{align}
 
-其中$i$遍历各种本底，$j$遍历各$\mathrm{S2}$ bins，$N_{obs,j}$为每个bin上的事件数，$N_{exp,j}$为每个bin上CE$\nu$NS信号的期望值。
-$N_{exp,j}$是$\epsilon^{uV}_{ee}$和$\epsilon^{dV}_{ee}$的函数。
-$B_{i,j}$为各种本底在不同$\mathrm{S2}$ bins上的期望，$\sigma_{stat,j}$描述观测量的统计涨落，
+其中$i$遍历各种本底，$j$遍历各$\mathrm{S2}$ bins，$N_{\mathrm{obs},j}$为每个bin上的事件数，$N_{\mathrm{exp},j}$为每个bin上CE$\nu$NS信号的期望值。
+$N_{\mathrm{exp},j}$是$\epsilon^{uV}_{ee}$和$\epsilon^{dV}_{ee}$的函数。
+$B_{i,j}$为各种本底在不同$\mathrm{S2}$ bins上的期望，$\sigma_{\mathrm{stat},j}$描述观测量的统计涨落，
 $\beta_i$为各种本底可能的与最佳期望值的偏离，描述了不确定度向期望的传递。$\gamma_f$为反应堆中微子流强与最佳期望的偏离。
 取$\Delta \chi^2=\chi^2-\chi^2_\mathrm{min}=4.61$以确定二维参数上的90\%置信区间（confidential interval），
 某一次测量的参数置信区间如图\ref{fig:nsi_sensitivity_s2only}，
@@ -118,8 +118,8 @@ S1-S2分析将使用$\mathrm{S1}$不为0的事件进行分析，系统误差中�
 \begin{align}
     \label{eq:nsi_s1s2_ll}
     \begin{split}
-    \chi^2 =& \sum_j\left[\frac{\left(N_{obs,j} - N_{exp,j}(\epsilon^{uV}_{ee}, \epsilon^{dV}_{ee}, t_1, t_2)(1 + \gamma_f) 
-    - \sum_{i}^2 B_{i,j}(1 + \beta_i)\right)^2}{\sigma^2_{stat,j}}\right] \\
+    \chi^2 =& \sum_j\left[\frac{\left(N_{\mathrm{obs},j} - N_{\mathrm{exp},j}(\epsilon^{uV}_{ee}, \epsilon^{dV}_{ee}, t_1, t_2)(1 + \gamma_f) 
+    - \sum_{i}^2 B_{i,j}(1 + \beta_i)\right)^2}{\sigma^2_{\mathrm{stat},j}}\right] \\
     & + \sum_{i}^2 t_i^2 + \sum_{i}^2(\frac{\beta_i}{\sigma^2_{\beta_i}})^2 + (\frac{\gamma_f}{\sigma^2_{\gamma_f}})^2
     \end{split}
 \end{align}
@@ -161,8 +161,8 @@ S1-S2分析的置信区间比S2-Only分析得到的结果差，一方面因为�
 \begin{align}
     \label{eq:nsi_ge_ll}
     \begin{split}
-    \chi^2 =& \sum_j\left[\frac{\left(N_{obs,j} - N_{exp,j}(\epsilon^{uV}_{ee}, \epsilon^{dV}_{ee}, t_q)(1 + \gamma_f) 
-    - B_{j}(1 + \beta)\right)^2}{\sigma^2_{stat,j}}\right] \\
+    \chi^2 =& \sum_j\left[\frac{\left(N_{\mathrm{obs},j} - N_{\mathrm{exp},j}(\epsilon^{uV}_{ee}, \epsilon^{dV}_{ee}, t_q)(1 + \gamma_f) 
+    - B_{j}(1 + \beta)\right)^2}{\sigma^2_{\mathrm{stat},j}}\right] \\
     & + t_q^2 + (\frac{\beta}{\sigma^2_{\beta}})^2 + (\frac{\gamma_f}{\sigma^2_{\gamma_f}})^2
     \end{split}
 \end{align}
@@ -194,13 +194,13 @@ $\sin^2\theta_W$在不同动量转移下取值不同，成为``跑动的''耦合
 \begin{align}
     \label{eq:thets_s2_ll}
     \begin{split}
-    \chi^2 =& \sum_j\left[\frac{\left(N_{obs,j} - N_{exp,j}(\sin^2\theta_W, t_2)(1 + \gamma_f) 
-    - \sum_{i}^2 B_{i,j}(1 + \beta_i)\right)^2}{\sigma^2_{stat,j}}\right] \\
+    \chi^2 =& \sum_j\left[\frac{\left(N_{\mathrm{obs},j} - N_{\mathrm{exp},j}(\sin^2\theta_W, t_2)(1 + \gamma_f) 
+    - \sum_{i}^2 B_{i,j}(1 + \beta_i)\right)^2}{\sigma^2_{\mathrm{stat},j}}\right] \\
     & + t_2^2 + \sum_{i}^2(\frac{\beta_i}{\sigma^2_{\beta_i}})^2 + (\frac{\gamma_f}{\sigma^2_{\gamma_f}})^2
     \end{split}
 \end{align}
 
-公式中的参数与式\ref{eq:nsi_s2_ll}意义相同，但此时$N_{exp,j}$是$\sin^2\theta_W$的函数。
+公式中的参数与式\ref{eq:nsi_s2_ll}意义相同，但此时$N_{\mathrm{exp},j}$是$\sin^2\theta_W$的函数。
 对弱混合角的某一次测量的参数置信区间如图\ref{fig:thetaw_sensitivity_s2only}，
 红色实线为考虑了所有系统误差的结果，蓝色虚线为不考虑电子产额系统误差，即$t_2=0$的结果。
 同时列出了PDG给出的$91.2\si{GeV/c}$动量转移和$\overline{\mathrm{MS}}$ scheme下的最佳拟合值\cite{particle_data_group_review_2020}。
@@ -221,13 +221,13 @@ $\sin^2\theta_W$在不同动量转移下取值不同，成为``跑动的''耦合
 \begin{align}
     \label{eq:theta_ge_ll}
     \begin{split}
-    \chi^2 =& \sum_j\left[\frac{\left(N_{obs,j} - N_{exp,j}(\sin^2\theta_W, t_q)(1 + \gamma_f) 
-    - B_{j}(1 + \beta)\right)^2}{\sigma^2_{stat,j}}\right] \\
+    \chi^2 =& \sum_j\left[\frac{\left(N_{\mathrm{obs},j} - N_{\mathrm{exp},j}(\sin^2\theta_W, t_q)(1 + \gamma_f) 
+    - B_{j}(1 + \beta)\right)^2}{\sigma^2_{\mathrm{stat},j}}\right] \\
     & + t_q^2 + (\frac{\beta}{\sigma^2_{\beta}})^2 + (\frac{\gamma_f}{\sigma^2_{\gamma_f}})^2
     \end{split}
 \end{align}
 
-公式中的参数与式\ref{eq:nsi_s2_ll}意义相同，但此时$N_{exp,j}$是$\sin^2\theta_W$和$t_q$的函数。
+公式中的参数与式\ref{eq:nsi_s2_ll}意义相同，但此时$N_{\mathrm{exp},j}$是$\sin^2\theta_W$和$t_q$的函数。
 淬灭因子的不确定度通过$t_q$传递。
 对弱混合角的某一次测量的参数置信区间如图\ref{fig:thetaw_sensitivity_ge}，
 红色实线为考虑了所有系统误差的结果，蓝色虚线不考虑淬灭因子的系统误差，即$t_q=0$的结果。
@@ -251,8 +251,8 @@ $\sin^2\theta_W$在不同动量转移下取值不同，成为``跑动的''耦合
 \begin{align}
     \label{eq:qy_s2_ll}
     \begin{split}
-    \chi^2 =& \sum_j\left[\frac{\left(N_{obs,j} - N_{exp,j}(t_2)(1 + \gamma_f) 
-    - \sum_{i}^2 B_{i,j}(1 + \beta_i)\right)^2}{\sigma^2_{stat,j}}\right] \\
+    \chi^2 =& \sum_j\left[\frac{\left(N_{\mathrm{obs},j} - N_{\mathrm{exp},j}(t_2)(1 + \gamma_f) 
+    - \sum_{i}^2 B_{i,j}(1 + \beta_i)\right)^2}{\sigma^2_{\mathrm{stat},j}}\right] \\
     & + \sum_{i}^2(\frac{\beta_i}{\sigma^2_{\beta_i}})^2 + (\frac{\gamma_f}{\sigma^2_{\gamma_f}})^2
     \end{split}
 \end{align}
@@ -276,8 +276,8 @@ $\sin^2\theta_W$在不同动量转移下取值不同，成为``跑动的''耦合
 \begin{align}
     \label{eq:ly_s1s2_ll}
     \begin{split}
-    \chi^2 =& \sum_j\left[\frac{\left(N_{obs,j} - N_{exp,j}(t_1,t_2)(1 + \gamma_f) 
-    - \sum_{i}^2 B_{i,j}(1 + \beta_i)\right)^2}{\sigma^2_{stat,j}}\right] \\
+    \chi^2 =& \sum_j\left[\frac{\left(N_{\mathrm{obs},j} - N_{\mathrm{exp},j}(t_1,t_2)(1 + \gamma_f) 
+    - \sum_{i}^2 B_{i,j}(1 + \beta_i)\right)^2}{\sigma^2_{\mathrm{stat},j}}\right] \\
     & + \sum_{i}^2(\frac{\beta_i}{\sigma^2_{\beta_i}})^2 + (\frac{\gamma_f}{\sigma^2_{\gamma_f}})^2
     \end{split}
 \end{align}
