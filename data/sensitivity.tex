@@ -20,7 +20,7 @@
     G_V &= ((g_V^p+2\epsilon_{ee}^{uV}+\epsilon_{ee}^{dV})Z+(g_V^n+\epsilon_{ee}^{uV}+2\epsilon_{ee}^{dV})N)F^V(Q^2)
 \end{align}
 
-其中$E_\nu$为中微子能量，$T$为核反冲能，$M$为原子核质量，$G_F$为费米常数，其他相关参数的定义见\ref{eq:cevns_theta}。
+其中$E_\nu$为中微子能量，$T$为核反冲能，$M$为原子核质量，$G_F$为费米常数，其他相关参数的定义见式\ref{eq:cevns_theta}。
 标准模型中这$\epsilon_{ee}^{uV}=\epsilon_{ee}^{dV}=0$，公式退化为\ref{eq:cevns_even_even}。
 下面分别分析LXeTPC上S2-Only分析和S1-S2分析（假设曝光量为$30\si{kg\cdot y}$。），以及HPGe探测器上分析的实验灵敏度（假设曝光量为$5\si{kg\cdot y}$。）。
 
@@ -88,7 +88,7 @@ $N_{\mathrm{exp},j}$是$\epsilon^{uV}_{ee}$和$\epsilon^{dV}_{ee}$的函数。
 $B_{i,j}$为各种本底在不同$\mathrm{S2}$ bins上的期望，$\sigma_{\mathrm{stat},j}$描述观测量的统计涨落，
 $\beta_i$为各种本底可能的与最佳期望值的偏离，描述了不确定度向期望的传递。$\gamma_f$为反应堆中微子流强与最佳期望的偏离。
 取$\Delta \chi^2=\chi^2-\chi^2_\mathrm{min}=4.61$以确定二维参数上的90\%置信区间（confidential interval），
-某一次测量的参数置信区间如图\ref{fig:nsi_sensitivity_s2only}，
+某一次测量的参数置信区间如图\ref{fig:nsi_sensitivity_s2only}，其中``RELICS''为预期的LXeTPC实验的名字，
 同时列出了COHERENT的首次结果作为对比\cite{akimov_observation_2017}。
 
 \begin{figure}
@@ -109,7 +109,7 @@ S1-S2分析将使用$\mathrm{S1}$不为0的事件进行分析，系统误差中�
 
 \begin{figure}
   \centering
-  \includesvg[width=0.6\linewidth]{figures/exp_s1s2_t1t2.svg}
+  \includesvg[width=0.7\linewidth]{figures/exp_s1s2_t1t2.svg}
   \caption{\label{fig:exp_s1s2_t1t2} 光电产额误差项$t_{1,2}$与CE$\nu$NS信号个数期望的对应关系}
 \end{figure}
 
@@ -125,7 +125,7 @@ S1-S2分析将使用$\mathrm{S1}$不为0的事件进行分析，系统误差中�
 \end{align}
 
 取$\Delta \chi^2=4.61$以确定二维参数上的90\%置信区间，
-某一次测量的参数置信区间如图\ref{fig:nsi_sensitivity_s2only}，
+某一次测量的参数置信区间如图\ref{fig:nsi_sensitivity_s1s2}，
 同时列出了COHERENT的首次结果作为对比\cite{akimov_observation_2017}。
 
 \begin{figure}
@@ -138,7 +138,7 @@ S1-S2分析的置信区间比S2-Only分析得到的结果差，一方面因为�
 
 \subsection{HPGe测量}
 
-利用高纯锗探测器进行反应堆中微子CE$\nu$NS测量的系统误差来源除了探测器源项以外，主要来自猝灭因子的不确定度和本底的不确定度。
+利用高纯锗探测器进行反应堆中微子CE$\nu$NS测量的系统误差来源除了探测器源项以外，主要来自淬灭因子的不确定度和本底的不确定度。
 
 表\ref{tab:sys_error_ge}总结了各种系统误差来源与取值，适用于本文所有HPGe上的灵敏度预测。
 
@@ -150,7 +150,7 @@ S1-S2分析的置信区间比S2-Only分析得到的结果差，一方面因为�
     名称 & 符号 & 取值 \\
     \midrule
     电子反冲本底不确定度 & $\sigma_{\beta}$ & $10\%$ \\
-    猝灭因子不确定度 & $t_q$ & 图\ref{fig:ge_quenching_factor} \\
+    淬灭因子不确定度 & $t_q$ & 图\ref{fig:ge_quenching_factor} \\
     \bottomrule
   \end{tabular}
   \label{tab:sys_error_ge}
@@ -177,8 +177,8 @@ S1-S2分析的置信区间比S2-Only分析得到的结果差，一方面因为�
   \caption{\label{fig:nsi_sensitivity_ge} 一次HPGe探测器测量对中微子超标准模型有效参数的限制（红色阴影）}
 \end{figure}
 
-使用$5\si{kg\cdot y}$HPGe的测量结果，置信区间非常窄，因为$\mathrm{Ge}$原子质量较低，核反冲平均能量比使用$\mathrm{Xe}$进行的测量高，
-对测量非常有利。
+使用$5\si{kg\cdot y}$\ HPGe的测量结果，置信区间非常窄，因为$\mathrm{Ge}$原子质量较低，对于相同能量的入射中微子，
+核反冲平均能量比使用$\mathrm{Xe}$进行的测量高，如图\ref{fig:cevns_event_rate}，对测量非常有利。
 
 \section{低动量转移下的弱混合角测量}
 
@@ -189,7 +189,7 @@ CE$\nu$NS与弱相互作用中的基本常数有关，温伯格角（Weinberg an
 $\sin^2\theta_W$在不同动量转移下取值不同，成为``跑动的''耦合常数。在极低动量转移下的测量将填补实验空白。
 本文将估计LXeTPC上S2-Only分析，以及HPGe探测器上分析的实验灵敏度。
 
-建立$\chi^2$，如式\ref{eq:nsi_s2_ll}。
+建立$\chi^2$，如式\ref{eq:thets_s2_ll}。
 
 \begin{align}
     \label{eq:thets_s2_ll}
@@ -228,9 +228,9 @@ $\sin^2\theta_W$在不同动量转移下取值不同，成为``跑动的''耦合
 \end{align}
 
 公式中的参数与式\ref{eq:nsi_s2_ll}意义相同，但此时$N_{\mathrm{exp},j}$是$\sin^2\theta_W$和$t_q$的函数。
-猝灭因子的不确定度通过$t_q$传递。
+淬灭因子的不确定度通过$t_q$传递。
 对弱混合角的某一次测量的参数置信区间如图\ref{fig:thetaw_sensitivity_ge}，
-红色实线为考虑了所有系统误差的结果，蓝色虚线不考虑猝灭因子的系统误差，即$t_q=0$的结果。
+红色实线为考虑了所有系统误差的结果，蓝色虚线不考虑淬灭因子的系统误差，即$t_q=0$的结果。
 
 \begin{figure}
     \centering
@@ -238,11 +238,12 @@ $\sin^2\theta_W$在不同动量转移下取值不同，成为``跑动的''耦合
     \caption{\label{fig:thetaw_sensitivity_ge} 一次HPGe探测器测量对弱混合角的限制}
 \end{figure}
 
-使用$5\si{kg\cdot y}$HPGe的测量结果优于液氙的测量结果，同时对比红色实线和蓝色虚线，猝灭因子系统误差对灵敏度的影响也很大。
+对比红色实线和蓝色虚线，淬灭因子系统误差对灵敏度的影响也很大。使用$5\si{kg\cdot y}$\ HPGe的测量结果优于液氙的测量结果，因为探测器阈值附近的信噪比更高，
+如图\ref{fig:event_smear_Ge_rate_prediction}，且HPGe探测器的能量分辨率更高。
 
 \section{低能核反冲的液氙光电产额测量}
 
-在标准模型框架内，利用反应堆中微子的CE$\nu$NS较高统计量，可以对LXeTPC的光点产额进行标定。
+在标准模型框架内，利用反应堆中微子的CE$\nu$NS较高统计量，可以对LXeTPC的光电产额进行标定。
 
 \subsection{电子产额标定}
 
@@ -267,7 +268,7 @@ $\sin^2\theta_W$在不同动量转移下取值不同，成为``跑动的''耦合
   \caption{\label{fig:qy_sensitivity_s2only} 一次S2-Only测量对液氙电子产额的限制}
 \end{figure}
 
-图\ref{fig:qy_sensitivity_s2only}红线所示精度的测量结果将对暗物质实验和机遇液氙的太阳中微子实验有提升作用。
+图\ref{fig:qy_sensitivity_s2only}红线所示精度的测量结果将对暗物质实验和基于液氙的太阳中微子实验有提升作用。
 
 \subsection{光产额标定}
 

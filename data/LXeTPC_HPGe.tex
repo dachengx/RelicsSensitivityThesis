@@ -10,7 +10,7 @@
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\linewidth]{figures/tpc_signals.png}
+    \includegraphics[width=0.8\linewidth]{figures/tpc_signals.png}
     \caption{\label{fig:tpc_principle} LXeTPC工作原理示意图}
 \end{figure}
 
@@ -19,7 +19,7 @@
 从上至下，电极分别为上屏蔽（Top Screen），阳极，门电极，阴极和下屏蔽（Bottom Screen）。
 上屏蔽和阳极在气氙中，其余三个电极浸泡在液氙中。这组TPC电极会建立几段纵向电场，
 阴极和门电极之间建立均匀漂移电场，门电极和阳极之间有强电场，可以将液面下电子拉出。
-TPC的上下端安装有两组光电倍增管（photomultiplier tube, PMT）阵列
+TPC的上下端安装有两组光电倍增管（photomultiplier tube, PMT）阵列。
 
 入射的中子、中微子或WIMP携带能量与液氙中原子核碰撞，产生核反冲；
 入射电子与$\gamma$光子与电子相互作用，相应地产生电子反冲（electronic recoil, ER）。
@@ -187,7 +187,7 @@ $\sigma_p$是位置重建的分辨率，是$\mathrm{S2}$大小和$(x,y,z)$的函
 其中$\tau'_e$是测量得到的电子的漂移寿命，$\vec{x_r}=(x_r,y_r,z_r)$为重建得到的事件位置。
 本文中将建立简化的响应模型，不考虑$\epsilon_L$和$G$的位置依赖性以及对$\mathrm{S1}$和$\mathrm{S2}$的修正引入的偏差，
 也不考虑漂移过程中的电子损耗（即认为$\tau_e=\infty$）。
-相关信号模型将在\ref{sec:lxe_signal}详细介绍。
+相关信号模型将在\ref{sec:lxe_signal}节详细介绍。
 
 \section{地面运行的LXeTPC探测器设计}
 
@@ -215,18 +215,20 @@ $\mu$子反符合探测器在屏蔽体外部，未展示在图中。
 内聚乙烯层内部的高纯度无氧铜用于屏蔽其外屏蔽体产生的$\gamma$本底。
 
 但是$\mu$子的穿透能力很强，我们仍然需要使用反符合探测器（muon veto detector）将$\mu$子本底压低2个量级。
-详细的$\mu$子模型和模拟以及相应的事件筛选条件，将在第\ref{sec:backgrounds}章中讨论。
+详细的$\mu$子模型和模拟以及相应的事件筛选条件，将在第\ref{sec:backgrounds}节中讨论。
 
 \section{HPGe探测器的工作原理}
 
 高纯锗探测器是一类广泛使用的半导体探测器，其具有优秀的能量分辨率，在$\gamma$射线谱学和暗物质直接探测等领域有重要应用。
 
-半导体探测器的耗尽层宽度$W_d$是与结区电容$C_d$相关，如式\ref{eq:hpg_wd}。
+半导体探测器的耗尽层宽度$W_d$与结区电容$C_d$相关，如式\ref{eq:hpg_wd}。
 
 \begin{align}
     \label{eq:hpg_wd}
-    W_d &= \left(\frac{2\cdot \varepsilon_e\cdot V_0}{e\cdot N_i}\right)^{1/2} \\
-    C_d &= \frac{\varepsilon_e}{W_d}
+    \begin{split}
+        W_d &= \left(\frac{2\cdot \varepsilon_e\cdot V_0}{e\cdot N_i}\right)^{1/2} \\
+        C_d &= \frac{\varepsilon_e}{W_d}
+    \end{split}
 \end{align}
 
 其中$\varepsilon_e$为材料的介电常数，$N_i$是半导体材料的杂质浓度，$e$是电子电荷，$V_0$为施加的反向电压。
@@ -237,4 +239,4 @@ HPGe探测器通过锗元素的熔炼技术使得材料中的杂质含量极低�
 所以一般使用电荷灵敏放大器处理探测器的输出信号，以保证放大器的输出电压脉冲幅度与入射粒子引起的电子-空穴对数目成正比。
 
 本文将不详细讨论HPGe探测器的运行状态和信号重建等对测量的影响，
-只考虑能谱形状、探测效率和能量分辨率的影响，详细计算见\ref{sec:hpge_sig}。
+只考虑能谱形状、探测效率和能量分辨率的影响，详细计算见\ref{sec:hpge_sig}节。

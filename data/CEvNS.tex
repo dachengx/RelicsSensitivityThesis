@@ -12,8 +12,8 @@
 
 CE$\nu$NS是中微子和原子核之间的弹性中性流相互作用，于1974年被首次预言提出\cite{freedman_coherent_1974,kopeliovich_isotopic_1974}。
 如图\ref{fig:cevns_demo}，中微子与原子核交换Z玻色子，同时也交换能量动量，产生核反冲（nuclear recoil, NR）。
-被加速的原子核以闪烁光（scintillation）和二次碰撞（secondary recoils）的形式继续将能量沉积到周围的物质中，
-最终这些信号被探测器记录到\cite{akimov_observation_2017}。在中微子和原子核交换Z玻色子的过程中，若动量转移足够小，
+在闪烁体探测器中，被加速的原子核以闪烁光（scintillation）和二次碰撞（secondary recoils）的形式继续将能量沉积到周围的物质中，
+最终这些信号被探测器记录到\cite{akimov_observation_2017}。在中微子和原子核交换Z玻色子的过程中，若动量转移足够小，以至于动量的物质波波长与原子核线度相仿，
 则原子核近似作为一个整体与中微子作用，作用截面近似与原子核中的中子个数的平方成正比关系。
 
 \begin{align}
@@ -47,23 +47,23 @@ $Z_{\pm}$和$N_{\pm}$是原子核内自旋（spin）取向为上（$+$）和下�
 最后可以近似得到$\frac{\mathrm{d}\sigma(E_\nu)}{\mathrm{d}T}\approx N^2$，对于非偶偶核，该式也近似成立。这正是CE$\nu$NS相干性的体现。
 
 对于不同种类的核素，因为原子核的质量$M$不同，所以微分截面$\frac{\mathrm{d}\sigma(E_\nu)}{\mathrm{d}T}$不同。
-将微分截面对原子核末态动能$T$积分，可以得到CE$\nu$NS总截面随着中微子能量$E_{\nu}$的变化关系。
+基于各元素核素丰度\cite{lide2004crc}，将微分截面对原子核末态动能$T$积分，可以得到CE$\nu$NS总截面随着中微子能量$E_{\nu}$的变化关系。
 
 \begin{figure}
     \centering
-    \includesvg[width=0.6\linewidth]{figures/cross_section.svg}
+    \includesvg[width=0.7\linewidth]{figures/cross_section.svg}
     \caption{\label{fig:xsec_elements} CE$\nu$NS对各种核素的截面随着中微子能量$E_{\nu}$的变化关系}
 \end{figure}
 
 图\ref{fig:xsec_elements}中列举了几种探测器常用核素（元素）的CE$\nu$NS截面与$E_{\nu}$的关系。作为对比，图中还包括了IBD\cite{akimov_observation_2017}的截面以及中微子-电子相干弹性散射（neutrino-electron elastic scattering, E$\nu$ES）的截面随着$E_{\nu}$的变化。
 几种截面都随着中微子能量升高而升高，但几种CE$\nu$NS截面始终高于IBD和与电子相互作用的截面。同时对于更重的元素，如$\mathrm{Xe}$，CE$\nu$NS截面相比于其他较轻元素更大。
-从截面大小的角度看，CE$\nu$NS相比IBD更容易被探测；但是因为CE$\nu$NS的动量转移太小，且不同于IBD可以借助$\gamma$和中子进行事件标记，对CE$\nu$NS的成功探测远晚于IBD。
+从截面大小的角度看，CE$\nu$NS相比IBD更容易被探测；但是因为CE$\nu$NS的动量转移较小（对于$\si{MeV}$中微子，平均不到1$\si{keV}$），且不同于IBD可以借助$\gamma$和中子进行事件标记，对CE$\nu$NS的成功探测远晚于IBD。
 同时图\ref{fig:xsec_elements}也为我们提示了选择探测器材料的思路：重元素的反应截面更大，对探测更有利。但是考虑到原子核末态动能也会随着元素质量数增加而偏向更低能量，
 以及不同探测器介质下探测器技术和性能的差异，应综合考虑选择探测手段。
 
 \section{CE$\nu$NS探测方法与进展}
 
-2017年，COHERENT合作组在美国橡树岭实验室的散射中子源上使用$\mathrm{CsI}$以高置信度探测到了$\pi$介子（pion）衰变过程放出的中微子的CE$\nu$NS信号\cite{akimov_observation_2017}。
+2017年，COHERENT合作组在美国橡树岭国家实验室的散射中子源上使用$\mathrm{CsI}$以高置信度探测到了$\pi$介子（pion）衰变过程放出的中微子的CE$\nu$NS信号\cite{akimov_observation_2017}。
 此后他们又并行开展了以其他手段进行CE$\nu$NS搜寻的实验，其中包括了HPGe、单相液氩（single phase LAr）探测器和碘化钠（$\mathrm{NaI}$）。
 虽然这些探测器的能量阈值不尽相同，但得益于散裂中子源中微子的较高能量（$\mathcal{O}\left(10\si{MeV}\right)$），
 CE$\nu$NS在这些探测器中的NR可以达到$\mathcal{O}\left(10\si{keV}\right)$，探测器阈值并不是实验成败的最关键因素。
@@ -90,4 +90,4 @@ CE$\nu$NS在这些探测器中的NR可以达到$\mathcal{O}\left(10\si{keV}\righ
 反应堆中微子CE$\nu$NS的低动量转移特性要求探测器实现极低阈值和低能区域的极低本底。
 类似的要求也在在相关领域，如暗物质直接探测，成为探测器关键技术。低质量暗物质，如$\mathcal{O}\left(1\si{GeV}\right)$大质量弱相互作用粒子（Weakly interacting massive particles, WIMP）对探测器原子核的核反冲动量转移也在几个$\si{keV}$量级。
 目前流行的暗物质探测技术中，LXeTPC和HPGe探测器均取得了较先进的成果。用于探测WIMP的探测器技术同样可以应用到同为核反冲信号的CE$\nu$NS探测中。
-因反应堆均在地面附近，若设计建造一台能够在地面正常运行的LXeTPC或HPGe探测器，则有可能实现对反应堆中微子CE$\nu$NS的探测。
+因商用反应堆均在地面附近，若设计建造一台能够在地面正常运行的LXeTPC或HPGe探测器，则有可能实现对反应堆中微子CE$\nu$NS的探测。
